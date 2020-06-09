@@ -1,20 +1,19 @@
 ###
-# Configuration for development environment (Vagrant and Docker)
+# Configuration for Vagrant
 ###
-name: wordpress
-#production:
+name: ihhelsinki
+language: fi
+production:
   # This is used to automatically fetch data from a staging/production environment
-  #domain: example.seravo.com
-  #ssh_port: 12345
-  #url: https://example.seravo.com
+  domain: ihhelsinki.fi-h.seravo.com
+  ssh_port: 10220
+  url: https://ihhelsinki.fi-h.seravo.com
 development:
   # Domains are automatically mapped to Vagrant with /etc/hosts modifications or Avahi
   domains:
-    - wordpress.local
-  # Allow Vagrant to expose .local domains on the local network (outside of laptop)
-  #avahi: true
+    - ihhelsinki.local
   # If you want to automatically pull stuff from production use 'always' or set
-  # to 'never' to just silence the 'yes/no' question during 'vagrant up'.
+  # to 'never' to just silience the 'yes/no' question during 'vagrant up'.
   #pull_production_db: always
   #pull_production_plugins: always
   #pull_production_themes: always
