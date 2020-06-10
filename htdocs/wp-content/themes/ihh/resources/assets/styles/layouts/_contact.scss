@@ -1,0 +1,138 @@
+.contact-info-box {
+  @include media-breakpoint-down("md") {
+    padding: 30px;
+    margin: 0 0 15px 0;
+  }
+
+  display: flex;
+  align-items: center;
+  padding: 60px;
+  background: #f3f3f3;
+  margin: 0 0 30px 0;
+
+  img {
+    @include media-breakpoint-down("sm") {
+      margin: 0 15px 0 0;
+      height: 30px;
+    }
+
+    margin: 0 60px 0 0;
+    height: 100px;
+    width: auto;
+  }
+
+  h2 {
+    @include media-breakpoint-down("sm") {
+      font-size: 18px;
+    }
+
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0 0 20px 0;
+  }
+
+  p {
+    @include media-breakpoint-down("sm") {
+      font-size: 14px;
+      word-break: break-all;
+    }
+
+    font-size: 18px;
+  }
+}
+
+.contact-location {
+  @include media-breakpoint-down("sm") {
+    margin: 30px 0;
+  }
+
+  @include make-row(0);
+
+  margin: 60px 0;
+
+  .contact-location-map {
+    @include media-breakpoint-down("sm") {
+      text-align: center;
+    }
+
+    @include media-breakpoint-down("md") {
+      @include make-col(12);
+    }
+
+    @include make-col(6);
+
+    position: relative;
+    //padding-bottom: 50%;
+
+    img {
+      @include media-breakpoint-down("sm") {
+        width: 75%;
+        height: auto;
+      }
+
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+    }
+
+    iframe {
+      max-width: 100%;
+      border: 0;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+    }
+  }
+
+  .contact-location-body {
+    @include media-breakpoint-down("md") {
+      @include make-col(12);
+    }
+
+    @include make-col(6);
+
+    .contact-location-body-section {
+      @include media-breakpoint-down("sm") {
+        margin-bottom: 30px;
+      }
+
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 60px;
+
+      img {
+        @include media-breakpoint-down("sm") {
+          width: 30px;
+          margin: 0 15px;
+        }
+
+        margin: 0 40px;
+        width: 80px;
+        height: auto;
+      }
+
+      p {
+        @include media-breakpoint-down("sm") {
+          font-size: 14px;
+          line-height: 24px;
+        }
+
+        font-size: 16px;
+        line-height: 27px;
+      }
+
+      strong {
+        @include media-breakpoint-down("sm") {
+          font-size: 16px;
+        }
+
+        font-size: 18px;
+      }
+
+      a {
+        color: inherit;
+      }
+    }
+  }
+}

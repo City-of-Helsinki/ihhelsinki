@@ -1,0 +1,117 @@
+.posts-container {
+  @include media-breakpoint-down("sm") {
+    margin: 30px 0;
+  }
+
+  @include make-row(0);
+
+  //justify-content: space-evenly;
+  margin: 60px 0;
+
+  .post-grid-item {
+    @include media-breakpoint-down("md") {
+      @include make-col(12);
+    }
+
+    @include media-breakpoint-up("sm") {
+      flex: 0 0 48%;
+    }
+
+    @include media-breakpoint-up("md") {
+      flex: 0 0 31%;
+    }
+
+    @include transition(all, 0.3s);
+
+    flex-flow: column;
+    font-family: $font-open-sans;
+    margin-bottom: 20px;
+    margin-right: auto;
+
+    header img {
+      max-width: 100%;
+      width: 100%;
+      height: auto;
+    }
+
+    h2 {
+      font-size: 16px;
+      line-height: 19px;
+      font-family: $font-open-sans;
+      font-weight: 600;
+      color: #231f00;
+      margin: 0 0 10px 0;
+      //flex: 1;
+      hyphens: auto;
+
+      a {
+        color: #231f00;
+
+        &:hover {
+          color: $primary-dark;
+          text-decoration: none;
+        }
+      }
+    }
+
+    .post-content {
+      flex: 1;
+      display: flex;
+      flex-flow: column;
+      flex-wrap: wrap;
+      padding: 20px;
+      background: #f3f3f3;
+      background: $kuvittaja-green-light;
+    }
+
+    .post-content-event-meta {
+      i {
+        font-size: 20px;
+        color: #000;
+        margin-right: 15px;
+      }
+
+      img {
+        width: 22px;
+        height: 22px;
+        margin-right: 15px;
+      }
+
+      p {
+        display: flex;
+        align-items: center;
+        color: #231f00;
+        font-size: 14px;
+        margin: 0 0 10px 0;
+
+        &:last-child {
+          margin: 0;
+        }
+      }
+    }
+
+    .read-more {
+      @extend .btn;
+
+      background: $primary-dark;
+      font-family: $font-open-sans;
+      font-weight: 500;
+      color: #fff;
+      text-align: center;
+      display: block;
+      margin: 30px auto 0 auto;
+      text-transform: uppercase;
+      border-radius: 20px;
+      padding: 7px 40px;
+
+      &:hover {
+        color: #fff;
+        background: darken($primary-dark, 10%);
+      }
+    }
+
+    &:hover {
+      box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+    }
+  }
+}

@@ -1,0 +1,96 @@
+.services-list {
+  @include media-breakpoint-down("sm") {
+    margin: 30px 0 0 0;
+  }
+
+  margin: 60px 0 0 0;
+
+  #services-select {
+    @include media-breakpoint-down("sm") {
+      width: 100%;
+      max-width: 100%;
+    }
+
+    margin: 0 0 30px 0;
+    display: inline-block;
+    width: auto;
+    background: url("../images/icons/angle-down.svg") 90% center no-repeat $kuvittaja-yellow;
+    border: none;
+    border-radius: 0;
+    -webkit-appearance: none;
+    text-align: center;
+    font-family: $font-open-sans;
+    font-weight: 600;
+    height: 80px;
+    padding-left: 40px;
+  }
+
+  .services-list-content {
+    @include media-breakpoint-down("sm") {
+      padding: 15px;
+    }
+
+    background-color: #faf7ca;
+    background-size: cover;
+    padding: 60px 30px;
+
+    .read-more {
+      @include media-breakpoint-down("sm") {
+        margin-top: 25px;
+        font-size: 15px;
+      }
+
+      @extend .btn;
+
+      @include transition(all, 0.3s);
+
+      margin-top: 20px;
+      background: #fff;
+      color: #000;
+      font-family: $font-source-sans;
+      font-size: 16px;
+      font-weight: bold;
+      text-transform: uppercase;
+      padding: 15px 30px;
+      border-radius: 30px;
+      line-height: 1;
+
+      &:hover {
+        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+      }
+    }
+  }
+
+  .services-list-body {
+    @include media-breakpoint-up("lg") {
+      max-width: 65%;
+    }
+  }
+
+  .services-list-body-text {
+    @include media-breakpoint-down("sm") {
+      padding: 20px;
+    }
+
+    background-color: $kuvittaja-pink-light;
+    padding: 35px 40px;
+
+    h2 {
+      @include media-breakpoint-down("sm") {
+        font-size: 22px;
+        line-height: 32px;
+        margin: 0 0 20px 0;
+      }
+
+      font-size: 28px;
+      line-height: 36px;
+      margin: 0 0 30px 0;
+      font-weight: bold;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+}

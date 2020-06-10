@@ -1,0 +1,80 @@
+.twitter {
+  @include media-breakpoint-down("sm") {
+    padding-bottom: 100px;
+  }
+
+  //background: $kuvittaja-green-light;
+  background: #91c8c2;
+  padding-bottom: 100px;
+
+  h2 {
+    @include media-breakpoint-down("sm") {
+      font-size: 45px;
+      margin: 0 0 25px 0;
+    }
+
+    font-weight: bold;
+    font-size: 60px;
+    padding: 0;
+    margin: 0 0 60px 0;
+  }
+
+  .tweets {
+    @include make-row(0);
+
+    justify-content: space-between;
+  }
+
+  .tweet-container {
+    @include media-breakpoint-down("md") {
+      @include make-col(6);
+
+      display: flex;
+    }
+
+    @include media-breakpoint-down("sm") {
+      @include make-col(10);
+      @include make-col-offset(1);
+
+      display: block;
+    }
+
+    @include make-col(4);
+
+    padding: 10px;
+  }
+
+  .tweet {
+    background: #fff;
+    padding: 0;
+
+    .tweet-content {
+      font-family: $font-open-sans;
+      font-size: 16px;
+      line-height: 24px;
+      padding: 20px;
+
+      > a {
+        color: $primary-dark;
+      }
+    }
+
+    .tweet-header {
+      > a {
+        display: block;
+        color: #000;
+        font-family: $font-open-sans;
+        font-weight: 500;
+        font-size: 16px;
+        text-transform: uppercase;
+        padding: 5px 20px;
+        background: #fff;
+        border-bottom: 1px solid #efefef;
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}

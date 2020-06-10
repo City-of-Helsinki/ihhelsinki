@@ -1,0 +1,40 @@
+.title-area {
+  margin-bottom: 60px;
+
+  .title {
+    @include make-col(6);
+
+    @include media-breakpoint-down("md") {
+      @include make-col(12);
+
+      text-align: left;
+      margin-top: 15px;
+    }
+
+    font-family: $font-nunito;
+
+    h1 {
+      color: #231f00;
+      font-size: 62px;
+      font-weight: 700;
+      line-height: 74px;
+      text-transform: uppercase;
+
+      @include media-breakpoint-down("sm") {
+        font-size: 32px;
+        line-height: 40px;
+      }
+    }
+
+    p {
+      color: #231f00;
+      font-size: 22px;
+      font-weight: 700;
+      line-height: 26px;
+
+      @include media-breakpoint-down("sm") {
+        font-size: 16px;
+      }
+    }
+  }
+}

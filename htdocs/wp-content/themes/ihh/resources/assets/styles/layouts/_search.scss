@@ -1,0 +1,27 @@
+.search-results {
+  h2 {
+    font-weight: bold;
+    font-size: 18px;
+    border-bottom: 1px solid #d8d8d8;
+    padding: 0 0 15px 0;
+    margin: 0 0 45px 0;
+  }
+
+  .search-result {
+    margin: 0 0 30px 0;
+
+    h3 {
+      font-size: 14px;
+      font-weight: bold;
+
+      a {
+        color: inherit;
+      }
+    }
+
+    .search-result-body {
+      font-size: 14px;
+      color: #6d6d6d;
+    }
+  }
+}

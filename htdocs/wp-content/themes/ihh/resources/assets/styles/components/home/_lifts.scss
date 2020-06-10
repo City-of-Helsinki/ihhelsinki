@@ -1,0 +1,81 @@
+.lift-box {
+  @include media-breakpoint-down("sm") {
+    padding: 15px 0;
+  }
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  padding-top: 110px;
+  padding-bottom: 110px;
+
+  .content {
+    @include media-breakpoint-down("md") {
+      @include make-col(10);
+      @include make-col-offset(1);
+    }
+
+    @include media-breakpoint-down("sm") {
+      @include make-col(12);
+      @include make-col-offset(0);
+
+      padding: 35px;
+    }
+
+    @include make-col(8);
+    @include make-col-offset(2);
+
+    background: $primary;
+    padding: 35px 65px;
+    text-align: center;
+
+    h2 {
+      @include media-breakpoint-down("sm") {
+        font-size: 22px;
+        margin: 0 0 25px 0;
+      }
+
+      font-family: $font-roboto;
+      font-size: 28px;
+      font-weight: bold;
+      margin: 0 0 35px 0;
+    }
+
+    p {
+      @include media-breakpoint-down("sm") {
+        font-size: 16px;
+        line-height: 22px;
+      }
+
+      font-family: $font-open-sans;
+      font-size: 20px;
+      line-height: 28px;
+    }
+
+    .cta {
+      @include media-breakpoint-down("sm") {
+        margin-top: 25px;
+        font-size: 15px;
+      }
+
+      @extend .btn;
+
+      @include transition(all, 0.3s);
+
+      margin-top: 50px;
+      background: #fff;
+      color: #000;
+      font-family: $font-source-sans;
+      font-size: 18px;
+      font-weight: bold;
+      text-transform: uppercase;
+      padding: 20px 40px;
+      border-radius: 40px;
+      line-height: 1;
+
+      &:hover {
+        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+      }
+    }
+  }
+}

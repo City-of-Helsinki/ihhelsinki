@@ -44,32 +44,59 @@
       "url": "https://wpackagist.org"
     },
     {
+      "type": "package",
+      "package": {
+        "name": "acf/advanced-custom-fields",
+        "version": "5.8.3",
+        "type": "wordpress-muplugin",
+        "dist": {
+          "type": "zip",
+          "url": "https://connect.advancedcustomfields.com/index.php?p=pro&a=download&k=b3JkZXJfaWQ9NTU4OTJ8dHlwZT1kZXZlbG9wZXJ8ZGF0ZT0yMDE1LTA1LTEyIDA3OjM4OjM4"
+        }
+      }
+    },
+    {
       "type": "composer",
       "url": "https://wp-languages.github.io"
     }
   ],
   "require": {
     "php": ">=7.2",
+    "acf/advanced-custom-fields": "^5.8.3",
+    "jjgrainger/posttypes": "^2.0",
     "johnpbloch/wordpress-core-installer": "^1.0",
     "johnpbloch/wordpress-core": "^5.0",
     "composer/installers": "^1.0",
     "koodimonni/composer-dropin-installer": "^1.0",
     "vlucas/phpdotenv": "^2.4",
-
     "koodimonni-language/fi": "*",
     "koodimonni-language/sv_se": "*",
-
     "seravo/seravo-plugin": "*",
 
     "wpackagist-plugin/native-lazyload": "*",
     "wpackagist-plugin/google-site-kit": "*",
-
-    "wpackagist-theme/twentynineteen": "*"
+    "wpackagist-plugin/classic-editor": "^1.5",
+    "wpackagist-plugin/clean-image-filenames": "~1.2",
+    "wpackagist-plugin/imsanity": "~2.3",
+    "wpackagist-plugin/polylang": "^2.6.1",
+    "wpackagist-plugin/simple-page-ordering": "~2.2",
+    "wpackagist-plugin/wordpress-seo": "^14.2",
+    "wpackagist-plugin/wp-mail-smtp": "^2.0.1"
   },
   "extra": {
     "installer-paths": {
       "htdocs/wp-content/plugins/{$name}/": ["type:wordpress-plugin"],
-      "htdocs/wp-content/mu-plugins/{$name}/": ["type:wordpress-muplugin"],
+      "htdocs/wp-content/mu-plugins/{$name}/": [
+        "type:wordpress-muplugin",
+        "acf/advanced-custom-fields",
+        "wpackagist-plugin/classic-editor",
+        "wpackagist-plugin/clean-image-filenames",
+        "wpackagist-plugin/imsanity",
+        "wpackagist-plugin/polylang",
+        "wpackagist-plugin/simple-page-ordering",
+        "wpackagist-plugin/wordpress-seo",
+        "wpackagist-plugin/wp-mail-smtp"
+      ],
       "htdocs/wp-content/themes/{$name}": ["type:wordpress-theme"]
     },
     "dropin-paths": {

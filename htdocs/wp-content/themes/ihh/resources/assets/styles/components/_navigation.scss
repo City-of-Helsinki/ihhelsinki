@@ -1,0 +1,93 @@
+.main-nav-container {
+  padding-bottom: 0;
+  padding-top: 0;
+  font-family: $font-source-sans;
+  background: #fff;
+
+  .navbar-nav {
+    .pll-parent-menu-item > a {
+      color: $primary;
+    }
+
+    .nav-item {
+      position: relative;
+      margin: 0 15px;
+
+      &.menu-search {
+        a {
+          font-size: 0;
+
+          &::before {
+            font-size: 0.9rem;
+            content: "\f002";
+            font-family: FontAwesome, sans-serif;
+          }
+        }
+      }
+
+      &.active > a {
+        border-bottom-color: $primary;
+      }
+    }
+
+    .pll-parent-menu-item,
+    .menu-search {
+      &.active > a {
+        border-bottom: none;
+      }
+    }
+
+    .nav-link {
+      @include transition(all, 0.3s);
+
+      color: $black;
+      text-transform: uppercase;
+      font-size: 0.9rem;
+      border-bottom: 2px solid transparent;
+      line-height: 1;
+
+      &:hover {
+        border-bottom-color: $primary;
+      }
+    }
+  }
+
+  .dropdown-menu {
+    min-width: 10rem;
+    padding: 0.5rem 0;
+    margin: 0.125rem 0 0;
+    font-size: 1rem;
+    text-align: left;
+    list-style: none;
+    background-color: #fff;
+    border: none;
+    border-radius: 0;
+
+    .nav-item {
+      margin: 0;
+
+      > .nav-link {
+        font-size: 0.8rem;
+
+        &:hover {
+          border-bottom-color: transparent;
+          color: $primary;
+        }
+      }
+
+      &.active > a {
+        border-bottom-color: transparent;
+        color: $primary;
+      }
+    }
+  }
+
+  .navbar-toggler {
+    .hamburger-icon {
+      background: url("../images/icons/hamburger.svg") center center;
+      display: block;
+      width: 25px;
+      height: 25px;
+    }
+  }
+}

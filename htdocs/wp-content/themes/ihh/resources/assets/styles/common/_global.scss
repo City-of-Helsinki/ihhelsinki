@@ -1,0 +1,19 @@
+img {
+  max-width: 100%;
+}
+
+.container-wide {
+  max-width: 1440px;
+  padding-right: $grid-gutter-width / 2;
+  padding-left: $grid-gutter-width / 2;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+body {
+  @include media-breakpoint-down("sm") {
+    * {
+      word-break: break-word;
+    }
+  }
+}

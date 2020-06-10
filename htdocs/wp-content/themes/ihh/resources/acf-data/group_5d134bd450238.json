@@ -1,0 +1,41 @@
+{
+    "key": "group_5d134bd450238",
+    "title": "Notification meta",
+    "fields": [
+        {
+            "key": "field_5d134be68beeb",
+            "label": "Expiry date",
+            "name": "expiry_date",
+            "type": "date_time_picker",
+            "instructions": "The expiry date for the notification",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "display_format": "d.m.Y H:i",
+            "return_format": "Y-m-d H:i:s",
+            "first_day": 1
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "notification"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1562872012
+}

@@ -1,17 +1,17 @@
 ###
 # Configuration for Vagrant
 ###
-name: ihhelsinki
+name: ihh
 language: fi
 production:
   # This is used to automatically fetch data from a staging/production environment
-  domain: ihhelsinki.fi-h.seravo.com
-  ssh_port: 10220
-  url: https://ihhelsinki.fi-h.seravo.com
+  domain: spouseprogram.fi-h.seravo.com
+  ssh_port: 10170
+  url: https://spouseprogram.fi-h.seravo.com
 development:
   # Domains are automatically mapped to Vagrant with /etc/hosts modifications or Avahi
   domains:
-    - ihhelsinki.local
+    - ihh.local
   # If you want to automatically pull stuff from production use 'always' or set
   # to 'never' to just silience the 'yes/no' question during 'vagrant up'.
   #pull_production_db: always

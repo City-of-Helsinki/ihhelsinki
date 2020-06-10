@@ -26,18 +26,6 @@ htdocs/wp-content/themes/twenty*
 htdocs/wp-content/languages/*
 !htdocs/wp-content/languages/.gitkeep
 
-# Various plugin generated files and directories
-htdocs/wp-content/cache
-htdocs/wp-content/*cache
-htdocs/wp-content/*backups
-htdocs/wp-content/backup*
-htdocs/wp-content/blogs.dir
-htdocs/wp-content/ewww
-htdocs/wp-content/ngg
-htdocs/wp-content/w3tc-config
-htdocs/wp-content/wflogs
-htdocs/wp-content/wp-rocket-config
-
 # WordPress content directories filled with user data
 # not to be tracked in git
 htdocs/wp-content/upgrade
@@ -65,3 +53,10 @@ myrecording
 # OSX Desktop Services Store files.
 .DS_Store
 .idea
+
+!htdocs/wp-content/mu-plugins/dude-twitter-feed
+!htdocs/wp-content/mu-plugins/ihh-post-types/
+!htdocs/wp-content/mu-plugins/bedrock-autoloader.php
+!htdocs/wp-content/mu-plugins/ihh-service-advisor/
+
+!htdocs/wp-content/themes/ihh/

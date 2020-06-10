@@ -1,0 +1,79 @@
+.alert-area {
+  .alert {
+    @include media-breakpoint-down("sm") {
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+
+    .notification-icon {
+      display: inline-block;
+      width: 7px;
+      height: 19px;
+      background: url("../images/icons/huutomerkki.png") center center no-repeat;
+      background-size: 100%;
+      margin: 0 10px -4px 0;
+    }
+
+    background: $kuvittaja-yellow;
+    border: none;
+    border-radius: 0;
+    color: #000;
+    font-weight: inherit;
+    line-height: 18px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin: 0;
+    border-bottom: 1px solid darken($kuvittaja-yellow, 20%);
+
+    &:last-child {
+      border-bottom-color: transparent;
+    }
+
+    .fa {
+      font-size: 20px;
+      margin-right: 10px;
+    }
+
+    .close {
+      @include media-breakpoint-down("sm") {
+        position: relative;
+        padding: 0;
+        flex: 1;
+        text-align: right;
+        margin-left: 10px;
+      }
+
+      padding: 14px 1.25rem;
+      opacity: 1;
+      text-shadow: none;
+    }
+
+    > .container {
+      @include media-breakpoint-down("sm") {
+        padding-left: 15px;
+        display: flex;
+        flex-direction: column;
+      }
+
+      align-items: center;
+      padding-left: 40px;
+
+      > .notification-body {
+        font-size: 85%;
+        margin: 1rem 0;
+      }
+    }
+  }
+}
+
+.alert-warning {
+  background: $kuvittaja-yellow;
+  border: none;
+  border-radius: 0;
+  color: #000;
+  font-weight: bold;
+  line-height: 18px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin: 20px 0 0 0;
+}

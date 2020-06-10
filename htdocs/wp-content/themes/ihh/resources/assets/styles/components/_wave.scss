@@ -1,0 +1,19 @@
+.has-wave {
+  position: relative;
+}
+
+#wave {
+  position: absolute;
+  bottom: -1px;
+  left: -1px;
+  right: 0;
+
+  .wave-content {
+    fill: #fff;
+
+    .contact-section & {
+      //fill: $kuvittaja-green-light;
+      fill: #91c8c2;
+    }
+  }
+}

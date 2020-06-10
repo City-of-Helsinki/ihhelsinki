@@ -22,6 +22,9 @@ cd "$( dirname "${BASH_SOURCE[0]}" )"/../.. || exit
 # This is still needed in addition to previous 'cd' when pushing to remote.
 GIT_DIR="$(pwd)/.git"
 
+# Constant for theme dir
+THEME_DIR="$(pwd)/htdocs/wp-content/themes/ihh"
+
 # Loop through all changed files, only take pushes to master into consideration.
 # If you use some other branch for production, change "refs/heads/master" to
 # something else like "refs/heads/yourbranch".
@@ -46,7 +49,7 @@ done <<< "$changed_files"
 # Do stuff with the triggers
 if $COMPOSER_CHANGED; then
   echo "Seravo: composer.json was updated, installing..."
-  composer install --no-dev
+  composer install --no-dev --no-ansi --no-interaction --no-progress --no-suggest --optimize-autoloader
 fi
 
 if $NGINX_CHANGED; then
@@ -74,6 +77,14 @@ then
     echo "==> Tideways event registration failed!"
   fi
 fi
+
+# Build the theme & its assets
+echo "IHH: Installing theme depencies from composer.json..."
+cd $THEME_DIR
+composer install --no-dev --no-ansi --no-interaction --no-progress --no-suggest --optimize-autoloader
+
+echo "IHH: Building assets..."
+yarn && yarn build:production
 
 # On every git push, always flush caches so the server will serve fresh contents
 echo "Seravo: Flushing all caches..."

@@ -1,0 +1,111 @@
+.home .services {
+  @include media-breakpoint-down("sm") {
+    padding: 40px 0;
+  }
+
+  padding: 80px 0;
+
+  .services-header {
+    img {
+      max-width: 100%;
+    }
+  }
+
+  .services-content {
+    h2 {
+      @include media-breakpoint-down("sm") {
+        margin: 25px 0;
+        font-size: 45px;
+      }
+
+      margin: 45px 0;
+      font-family: $font-roboto;
+      font-weight: bold;
+      font-size: 60px;
+      padding: 0;
+    }
+  }
+
+  .home-services-list {
+    @include make-row(0);
+
+    list-style-type: none;
+    padding: 0;
+
+    > li {
+      @include media-breakpoint-down("sm") {
+        @include make-col(12);
+
+        margin-bottom: 15px;
+      }
+
+      @include make-col(6);
+
+      margin-bottom: 20px;
+      display: flex;
+      align-items: stretch;
+
+      &:nth-child(odd) {
+        @include media-breakpoint-down("sm") {
+          padding-right: 0;
+        }
+
+        padding-right: 10px;
+      }
+
+      &:nth-child(even) {
+        @include media-breakpoint-down("sm") {
+          padding-left: 0;
+        }
+
+        padding-left: 10px;
+      }
+
+      > a {
+        @include media-breakpoint-down("sm") {
+          font-size: 18px;
+          padding: 20px 10px;
+        }
+
+        @include transition(all, 0.3s);
+
+        position: relative;
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: #000;
+        background: $primary;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 1;
+        padding: 20px;
+        text-align: left;
+
+        &::after {
+          @include media-breakpoint-down("sm") {
+            background: none;
+            font-family: FontAwesome, sans-serif;
+            content: "\f105";
+            width: auto;
+            height: auto;
+            color: #fff;
+            margin-right: 10px;
+          }
+
+          content: "";
+          background: url("../images/icons/angle-right.svg") no-repeat;
+          display: block;
+          width: 20px;
+          height: 26px;
+          background-size: contain;
+        }
+
+        &:hover {
+          text-decoration: none;
+          background: darken($primary, 10%);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,108 @@
+.contact-section {
+  @include media-breakpoint-down("sm") {
+    padding: 15px 0;
+  }
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  padding-top: 100px;
+  padding-bottom: 260px;
+
+  .content {
+    @include media-breakpoint-down("sm") {
+      padding: 30px;
+    }
+
+    @include make-col(12);
+
+    padding: 30px 60px;
+    background: #f3f3f3;
+
+    h2 {
+      @include media-breakpoint-down("sm") {
+        font-size: 45px;
+        margin: 0 0 25px 0;
+      }
+
+      font-size: 60px;
+      font-weight: bold;
+      margin: 0 0 45px 0;
+      padding: 0;
+    }
+  }
+
+  .contact-services {
+    @include make-row(0);
+  }
+
+  .contact-services-service {
+    @include make-col(6);
+
+    @include media-breakpoint-down("md") {
+      @include make-col(12);
+    }
+
+    h3 {
+      @include media-breakpoint-down("sm") {
+        font-size: 20px;
+        margin-bottom: 25px;
+        display: flex;
+        align-items: center;
+      }
+
+      font-weight: bold;
+      font-size: 24px;
+      margin-bottom: 40px;
+      display: flex;
+      align-items: center;
+
+      &::before {
+        @include media-breakpoint-down("sm") {
+          background-size: contain;
+          margin-right: 20px;
+          flex: 0 0 34px;
+        }
+
+        content: "";
+        width: 60px;
+        height: 60px;
+        display: block;
+        float: left;
+        margin-right: 30px;
+      }
+    }
+
+    p {
+      @include media-breakpoint-down("sm") {
+        padding-left: 54px;
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: 30px;
+      }
+
+      padding-left: 74px;
+      font-size: 18px;
+      line-height: 28px;
+      margin-bottom: 40px;
+    }
+
+    &.information-service h3 {
+      &::before {
+        background: transparent url("../images/icons/customer.png") center center no-repeat;
+        background-size: contain;
+      }
+    }
+
+    &.advisory-service h3 {
+      &::before {
+        background: transparent url("../images/icons/corporative.png") center center no-repeat;
+        background-size: contain;
+      }
+    }
+  }
+
+  .contact-services-footer {
+    text-align: center;
+  }
+}
