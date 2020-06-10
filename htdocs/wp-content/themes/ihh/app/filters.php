@@ -157,5 +157,16 @@ add_filter( 'pll_the_languages_args', function ( $args ) {
     $args['display_names_as'] = 'slug';
 
     return $args;
-}
-);
+} );
+
+/**
+ * Mail
+ */
+
+add_filter( 'wp_mail_from', function () {
+    return "no_reply@ihhelsinki.fi";
+} );
+
+add_filter( 'wp_mail_from_name', function () {
+    return "International House Helsinki";
+} );
