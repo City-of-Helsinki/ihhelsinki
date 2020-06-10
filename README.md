@@ -2,22 +2,22 @@
 
 ## Details for SSH/SFTP
 
-USER: spouseprogram
-HOST: spouseprogram.fi-h.seravo.com
-PORT: 10170
+USER: ihhelsinki
+HOST: ihhelsinki.fi-h.seravo.com
+PORT: 10220
 
 ## Local Development with Git
 
 You can start local development by cloning this site to your machine:
 
 ```
-$ git clone ssh://spouseprogram@spouseprogram.fi-h.seravo.com:10170/data/wordpress ~/Projects/spouseprogram --origin production
+$ git clone ssh://ihhelsinki@ihhelsinki.fi-h.seravo.com-h.seravo.com:10170/data/wordpress ~/Projects/ihhelsinki --origin production
 ```
 
 After you have committed your changes you can push them back:
 
 ```
-$ cd ~/Projects/spouseprogram
+$ cd ~/Projects/ihhelsinki
 $ git push production master
 ```
 

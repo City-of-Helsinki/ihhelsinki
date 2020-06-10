@@ -5,9 +5,9 @@ name: ihh
 language: fi
 production:
   # This is used to automatically fetch data from a staging/production environment
-  domain: spouseprogram.fi-h.seravo.com
-  ssh_port: 10170
-  url: https://spouseprogram.fi-h.seravo.com
+  domain: ihhelsinki.fi-h.seravo.com
+  ssh_port: 10220
+  url: https://ihhelsinki.fi-h.seravo.com
 development:
   # Domains are automatically mapped to Vagrant with /etc/hosts modifications or Avahi
   domains:
