@@ -27,8 +27,8 @@ THEME_DIR="$(pwd)/htdocs/wp-content/themes/ihh"
 SA_DIR="$(pwd)/service-advisor"
 PUBLIC_DIR="$(pwd)/htdocs"
 
-HOMEPAGE_SERVICEADVISOR="https://ihhelsinki.fi-h.seravo.com/serviceadvisor/"
-HOMEPAGE_KIOSK="https://ihhelsinki.fi-h.seravo.com/infokiosk/"
+HOMEPAGE_SERVICEADVISOR="https://ihhelsinki.fi-h.seravo.com/serviceadvisor"
+HOMEPAGE_KIOSK="https://ihhelsinki.fi-h.seravo.com/infokiosk"
 
 API_URL="https://ihhelsinki.fi-h.seravo.com/wp-json/serviceadvisor/v1"
 
