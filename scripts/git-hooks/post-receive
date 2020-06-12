@@ -97,12 +97,14 @@ echo "SA: Building Public..."
 SKIP_PREFLIGHT_CHECK=true REACT_APP_API_URL=$API_URL REACT_APP_VERSION=public yarn build
 
 echo "SA: Moving Public to destination..."
+rm -rf $PUBLIC_DIR/serviceadvisor
 mv build/* $PUBLIC_DIR/serviceadvisor
 
 echo "SA: Building Kiosk..."
 SKIP_PREFLIGHT_CHECK=true REACT_APP_API_URL=$API_URL REACT_APP_VERSION=service yarn build
 
 echo "SA: Moving Kiosk to destination..."
+rm -rf $PUBLIC_DIR/infokiosk
 mv build/* $PUBLIC_DIR/infokiosk
 
 # On every git push, always flush caches so the server will serve fresh contents
