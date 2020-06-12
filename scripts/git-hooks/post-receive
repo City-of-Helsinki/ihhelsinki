@@ -26,7 +26,7 @@ GIT_DIR="$(pwd)/.git"
 THEME_DIR="$(pwd)/htdocs/wp-content/themes/ihh"
 SA_DIR="$(pwd)/service-advisor"
 PUBLIC_DIR="$(pwd)/htdocs"
-API_URL="https://ihhelsinki.fi-h.seravo.com/wp-json/serviceadvisor/v1/"
+API_URL="https://ihhelsinki.fi-h.seravo.com/wp-json/serviceadvisor/v1"
 
 # Loop through all changed files, only take pushes to master into consideration.
 # If you use some other branch for production, change "refs/heads/master" to
