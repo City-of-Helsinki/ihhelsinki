@@ -98,14 +98,14 @@ cd $SA_DIR
 yarn
 
 echo "SA: Building Public..."
-HOMEPAGE=$HOMEPAGE_SERVICEADVISOR SKIP_PREFLIGHT_CHECK=true REACT_APP_API_URL=$API_URL REACT_APP_VERSION=public yarn build
+PUBLIC_URL=$HOMEPAGE_SERVICEADVISOR SKIP_PREFLIGHT_CHECK=true REACT_APP_API_URL=$API_URL REACT_APP_VERSION=public yarn build
 
 echo "SA: Moving Public to destination..."
 rm -rf $PUBLIC_DIR/serviceadvisor
 mv build $PUBLIC_DIR/serviceadvisor
 
 echo "SA: Building Kiosk..."
-HOMEPAGE=$HOMEPAGE_KIOSK SKIP_PREFLIGHT_CHECK=true REACT_APP_API_URL=$API_URL REACT_APP_VERSION=service yarn build
+PUBLIC_URL=$HOMEPAGE_KIOSK SKIP_PREFLIGHT_CHECK=true REACT_APP_API_URL=$API_URL REACT_APP_VERSION=service yarn build
 
 echo "SA: Moving Kiosk to destination..."
 rm -rf $PUBLIC_DIR/infokiosk
