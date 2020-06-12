@@ -1,0 +1,41 @@
+@import '../../global-styles/_variables.scss';
+
+.AppButtonRounded {
+  width: 100%;
+  max-width: 300px;
+  height: 64px;
+  border-radius: 37px;
+  cursor: Pointer;
+  margin: 16px;
+  color: $color-primary-white;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 30px;
+  font-weight: 400;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+
+  &.App-service {
+    width: 100%;
+    max-width: 600px;
+    height: 100px;
+    border-radius: 50px;
+  }
+
+  &.default {
+    background-color: $color-primary-green;
+  }
+
+  &.action {
+    background-color: $color-button-orange;
+  }
+
+  &__inner {
+    font-size: 24px;
+
+    &.App-service {
+      font-size: 36px;
+    }
+  }
+}

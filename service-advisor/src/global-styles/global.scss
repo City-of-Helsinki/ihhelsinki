@@ -1,0 +1,30 @@
+@import './foundation-icons/foundation-icons.css';
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+  box-sizing: border-box;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans",sans-serif;
+  font-size: 62.5%; // 1 rem = 10px;
+}
+
+ol, ul {
+  list-style-position: inside;
+}
+
+li {
+  line-height: initial;
+}

@@ -1,0 +1,36 @@
+@import "../../global-styles/mixins";
+
+.StartPage{
+  @include page;
+
+  &__button-group {
+    @include pageButtonGroup;
+  }
+
+  &__meta {
+    margin: 72px auto 60px auto;
+    max-width: 685px;
+    width: 100%;
+    font-size: 18px;
+    text-align: left;
+    font-weight: 300;
+    line-height: 20px;
+
+    &.App-service {
+      max-width: 900px;
+      font-size: 26px;
+      line-height: 1.1;
+    }
+  }
+
+  &_disclaimer {
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 300;
+    color: #0072C6;
+
+    &.App-service {
+      font-size: 20px;
+    }
+  }
+}

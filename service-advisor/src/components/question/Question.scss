@@ -1,0 +1,54 @@
+@import "../../global-styles/mixins";
+
+.Question {
+  width: 100%;
+  max-width: 685px;
+
+  &.App-service {
+    max-width: 1000px;
+  }
+
+  &__text {
+    font-size: 28px;
+
+    &.App-service {
+      font-size: 36px;
+    }
+  }
+
+  &__descriptions {
+    width: 100%;
+    max-width: 600px;
+    text-align: left;
+    margin-top: 32px;
+
+    &.App-service {
+      max-width: 920px;      
+    }
+  }
+
+  &__description {
+    font-size: 18px;
+    margin-bottom: 12px;
+
+    &.App-service {
+      font-size: 26px;
+      margin-bottom: 36px;
+    }
+  }
+
+  &__options {
+    margin-top: 4rem;
+  }
+
+  &__option {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  @media only screen and (max-width: 800px) {
+    margin-top: 120px;
+  }
+}

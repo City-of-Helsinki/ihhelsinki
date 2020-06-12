@@ -1,0 +1,77 @@
+@import '../../global-styles/_variables.scss';
+
+.AppButtonCircular {
+    position: absolute;
+    top: 240px;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $color-secondary-green;
+    background-color: white;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: 'Source Sans Pro', sans-serif;
+    border-radius: 100%;
+    box-shadow: 0 2px 4px 0 rgba(black,0.5);
+    cursor: pointer;
+    margin: 16px;
+
+    &.App-service {
+      width: 200px;
+      height: 200px;
+      font-size: 28px;
+      top: 360px;
+    }
+
+    @media only screen and (max-width: 800px) {
+      position: absolute;
+      top: 40px;
+    }
+
+    &.close {
+      right: 100px;
+
+      @media only screen and (max-width: 800px) {
+        right: 24px;
+      }
+    }
+
+    &.back {
+      left: 100px;
+
+      @media only screen and (max-width: 800px) {
+        left: 24px;
+      }
+    }
+
+    &__label {
+      text-transform: uppercase;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+
+      &-icon {
+        margin-bottom: 14px;
+        width: 31.5px;
+        height: 31.5px;
+        color: $color-secondary-green;
+        font-size: 40px;
+
+        &.App-service {
+          width: 42px;
+          height: 42px;
+          font-size: 64px;
+          margin-bottom: 36px;
+        }
+      }
+    }
+}
+
+.fi-play:before {
+    content: "\f198";
+    display: block;
+    transform: rotate(180deg) !important;
+}

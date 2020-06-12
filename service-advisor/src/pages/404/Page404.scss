@@ -1,0 +1,45 @@
+@import "../../global-styles/variables";
+@import "../../global-styles/mixins";
+
+.Page404 {
+  @include page;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__label {
+    font-size: 200px;
+    font-weight: 100;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 48px;
+    p {
+      font-size: 30px;
+    }
+  }
+
+  &__controls {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    a {
+      color: $color-progressbar-progress;
+      text-decoration: none;
+      margin:20px;
+    }
+  }
+}
+
+.fi-play:before {
+  content: "\f198";
+  display: block;
+  transform: rotate(180deg) !important;
+}

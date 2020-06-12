@@ -1,0 +1,9 @@
+@import "../../global-styles/mixins";
+
+.HomePage{
+  @include page;
+
+  &__button-group {
+    padding-top: 60px;
+  }
+}

@@ -1,0 +1,18 @@
+.App-logoContainer {
+  width: 100%;
+  max-width: 456px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  // customized styling for service version
+  &.App-service {
+    max-width: 600px;
+  }
+}
+
+.App-logo {
+  width: 100%;
+  height: auto;
+}

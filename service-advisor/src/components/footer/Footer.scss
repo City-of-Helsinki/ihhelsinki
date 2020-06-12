@@ -1,0 +1,51 @@
+@import '../../global-styles/variables';
+
+.Footer {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: $color-primary-green;
+
+    @media only screen and (min-width: 600px) {
+      flex-direction: row;
+    }
+  }
+
+  &__logosGroup {
+    display: flex;
+    flex-flow: row wrap;
+    margin: auto;
+    padding: 12px;
+    justify-content: center;
+
+    @media only screen and (min-width: 600px) {
+      width: 50%;
+    }
+
+    & img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__contact {
+    font-size: 14px;
+    padding: 12px;
+    color: white;
+    text-overflow: ellipsis;
+    line-height: 16px;
+
+    @media only screen and (min-width: 600px) {
+      width: 50%;
+    }
+  }
+
+  &-imageContainer {
+    flex: 1;
+    padding: 12px;
+    align-self: center;
+    max-width: 500px;
+    min-width: 160px;
+  }
+}

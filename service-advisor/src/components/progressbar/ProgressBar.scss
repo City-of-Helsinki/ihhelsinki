@@ -1,0 +1,24 @@
+@import '../../global-styles/_variables.scss';
+
+.ProgressBar {
+
+    &__outer {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        background-color: $color-progressbar;
+        height: 40px;
+        z-index: 1;
+    }
+
+    &__inner {
+        position: absolute;
+        left: 0;
+        top: 0;
+        background-color: $color-progressbar-progress;
+        height: 40px;
+        z-index: 1;
+        transition: all .3s ease-in;
+    }
+}

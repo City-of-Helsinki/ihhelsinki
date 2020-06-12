@@ -1,0 +1,24 @@
+@import "../../global-styles/mixins";
+@import "../../global-styles/variables";
+
+.QuestionPage {
+  @include page;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 16px;
+
+  &.App-service {
+    margin-top: 160px;
+  }
+
+  &__start-control {
+    margin: 20px;
+
+    &.button {
+      font-size: 18px;
+      cursor: pointer;
+    }
+  }
+
+}
