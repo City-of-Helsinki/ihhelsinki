@@ -1,7 +1,6 @@
 {
   "name": "ihh-service-advisor",
   "version": "0.1.0",
-  "homepage": "${HOMEPAGE}",
   "dependencies": {
     "@reach/router": "^1.2.1",
     "@types/jest": "23.3.13",
