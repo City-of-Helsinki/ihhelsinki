@@ -2,7 +2,7 @@
   "name": "ihh-service-advisor",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://ihhelsinki.fi-h.seravo.com/serviceadvisor",
+  "homepage": "${HOMEPAGE}",
   "dependencies": {
     "@reach/router": "^1.2.1",
     "@types/jest": "23.3.13",

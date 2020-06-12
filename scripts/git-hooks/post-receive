@@ -26,6 +26,10 @@ GIT_DIR="$(pwd)/.git"
 THEME_DIR="$(pwd)/htdocs/wp-content/themes/ihh"
 SA_DIR="$(pwd)/service-advisor"
 PUBLIC_DIR="$(pwd)/htdocs"
+
+HOMEPAGE_SERVICEADVISOR="https://serviceadvisor.ihhelsinki.fi-h.seravo.com"
+HOMEPAGE_KIOSK="https://infokiosk.ihhelsinki.fi-h.seravo.com"
+
 API_URL="https://ihhelsinki.fi-h.seravo.com/wp-json/serviceadvisor/v1"
 
 # Loop through all changed files, only take pushes to master into consideration.
@@ -94,14 +98,14 @@ cd $SA_DIR
 yarn
 
 echo "SA: Building Public..."
-SKIP_PREFLIGHT_CHECK=true REACT_APP_API_URL=$API_URL REACT_APP_VERSION=public yarn build
+HOMEPAGE=$HOMEPAGE_SERVICEADVISOR SKIP_PREFLIGHT_CHECK=true REACT_APP_API_URL=$API_URL REACT_APP_VERSION=public yarn build
 
 echo "SA: Moving Public to destination..."
 rm -rf $PUBLIC_DIR/serviceadvisor
 mv build $PUBLIC_DIR/serviceadvisor
 
 echo "SA: Building Kiosk..."
-SKIP_PREFLIGHT_CHECK=true REACT_APP_API_URL=$API_URL REACT_APP_VERSION=service yarn build
+HOMEPAGE=$HOMEPAGE_KIOSK SKIP_PREFLIGHT_CHECK=true REACT_APP_API_URL=$API_URL REACT_APP_VERSION=service yarn build
 
 echo "SA: Moving Kiosk to destination..."
 rm -rf $PUBLIC_DIR/infokiosk
