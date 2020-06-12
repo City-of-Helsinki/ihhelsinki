@@ -22,8 +22,11 @@ cd "$( dirname "${BASH_SOURCE[0]}" )"/../.. || exit
 # This is still needed in addition to previous 'cd' when pushing to remote.
 GIT_DIR="$(pwd)/.git"
 
-# Constant for theme dir
+# Custom constants
 THEME_DIR="$(pwd)/htdocs/wp-content/themes/ihh"
+SA_DIR="$(pwd)/service-advisor"
+PUBLIC_DIR="$(pwd)/htdocs"
+API_URL="https://ihhelsinki.fi-h.seravo.com/wp-json/serviceadvisor/v1/"
 
 # Loop through all changed files, only take pushes to master into consideration.
 # If you use some other branch for production, change "refs/heads/master" to
@@ -85,6 +88,22 @@ composer install --no-dev --no-ansi --no-interaction --no-progress --no-suggest 
 
 echo "IHH: Building assets..."
 yarn && yarn build:production
+
+echo "SA: Installing deps..."
+cd $SA_DIR
+yarn
+
+echo "SA: Building Public..."
+SKIP_PREFLIGHT_CHECK=true REACT_APP_API_URL=$API_URL REACT_APP_VERSION=public yarn build
+
+echo "SA: Moving Public to destination..."
+mv build $PUBLIC_DIR/serviceadvisor
+
+echo "SA: Building Kiosk..."
+SKIP_PREFLIGHT_CHECK=true REACT_APP_API_URL=$API_URL REACT_APP_VERSION=service yarn build
+
+echo "SA: Moving Kiosk to destination..."
+mv build $PUBLIC_DIR/infokiosk
 
 # On every git push, always flush caches so the server will serve fresh contents
 echo "Seravo: Flushing all caches..."
