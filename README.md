@@ -1,24 +1,26 @@
-# Readme for a Seravo WordPress site
+# International House Helsinki
 
 ## Details for SSH/SFTP
 
+```
 USER: ihhelsinki
 HOST: ihhelsinki.fi-h.seravo.com
 PORT: 10220
-
-## Local Development with Git
-
-You can start local development by cloning this site to your machine:
-
-```
-$ git clone ssh://ihhelsinki@ihhelsinki.fi-h.seravo.com-h.seravo.com:10170/data/wordpress ~/Projects/ihhelsinki --origin production
 ```
 
-After you have committed your changes you can push them back:
+## Configure SSH-access to production
+Please see [Docs](https://seravo.com/docs/get-started/configure-ssh/) to configure your keys to the production.
+
+## Set a production-remote
 
 ```
-$ cd ~/Projects/ihhelsinki
-$ git push production master
+$ git remote add production ssh://ihhelsinki@ihhelsinki.fi-h.seravo.com:10220/data/wordpress
+```
+
+After you have committed your changes you can deploy them to `production` origin:
+
+```
+$ git push --force production master
 ```
 
 ## Documentation
