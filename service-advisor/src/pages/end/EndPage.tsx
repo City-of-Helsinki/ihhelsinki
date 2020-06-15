@@ -48,7 +48,7 @@ class EndPage extends React.Component<TPageProps, TPageState> {
   startAgain = () => {
     this.props.questionStore!.reset();
     this.props.answerStore!.reset();
-    navigate('/start');
+    navigate('/');
   }
 
   savePdf = async () => {
@@ -59,7 +59,8 @@ class EndPage extends React.Component<TPageProps, TPageState> {
 
   viewPdf = () => {
     const answers = this.props.answerStore!.answers;
-    window.open(`/result/${answers.join('-')}`);
+    navigate(`/result/${answers.join('-')}`);
+    // window.open(`/result/${answers.join('-')}`);
   }
 
   sendAsEmail = (event: React.FormEvent<HTMLFormElement>) => {
@@ -139,7 +140,7 @@ class EndPage extends React.Component<TPageProps, TPageState> {
                   clickHandler={this.savePdf}
                 />
               </div>
-            
+
               <form className="EndPage__email" onSubmit={this.sendAsEmail}>
                 <h2>{languageStore!.getTranslatedText('sendAsEmail')}</h2>
                 <div>
