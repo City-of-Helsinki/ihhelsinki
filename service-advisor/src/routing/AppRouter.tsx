@@ -1,6 +1,6 @@
 import React from 'react';
-import { Router, Redirect} from "@reach/router";
-import { HomePage, StartPage, QuestionsPage, EndPage, Page404, PDFResultPage } from '../pages/';
+import { Router } from "@reach/router";
+import { StartPage, QuestionsPage, EndPage, Page404, PDFResultPage } from '../pages/';
 
 const AppRouter = () => (
         <Router>
