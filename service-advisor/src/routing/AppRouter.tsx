@@ -6,9 +6,9 @@ const AppRouter = () => (
         <Router>
           {/* homepage is currently omitted because the app is only in english atm,
           change redirection to homepage if it is in used */}
-          <Redirect noThrow from="/" to="start" />
+          {/* <Redirect noThrow from="/" to="start" /> */}
           {/* <HomePage path="home"/> */}
-          <StartPage path="start"/>
+          <StartPage path="/"/>
           <QuestionsPage path="questions/"/>
           <EndPage path="questions/end"/>
           <PDFResultPage path="result/:answerIdString" />
