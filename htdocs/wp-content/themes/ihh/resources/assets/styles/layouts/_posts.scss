@@ -23,6 +23,7 @@
 
     @include transition(all, 0.3s);
 
+    display: flex;
     flex-flow: column;
     font-family: $font-open-sans;
     margin-bottom: 20px;
@@ -41,7 +42,7 @@
       font-weight: 600;
       color: #231f00;
       margin: 0 0 10px 0;
-      //flex: 1;
+      flex: 1;
       hyphens: auto;
 
       a {
