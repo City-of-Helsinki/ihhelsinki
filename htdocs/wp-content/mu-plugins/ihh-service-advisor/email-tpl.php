@@ -79,13 +79,13 @@
             }
         </style>
 
-        <div id="header">
-            <h1><?php the_field( 'email_title', 'option' ); ?></h1>
-        </div>
+<!--        <div id="header">-->
+<!--            <h1>--><?php //the_field( 'email_title', 'option' ); ?><!--</h1>-->
+<!--        </div>-->
 
         <div id="content">
             <div>
-                <h2>Your welcome guide</h2>
+<!--                <h2>Your welcome guide</h2>-->
                 <div class="views-element-container">
                     <div class="answers view view-arrival-app view-id-arrival_app view-display-id-answer_html">
                         <div class="view-content">
