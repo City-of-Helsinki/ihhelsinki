@@ -236,6 +236,25 @@
                     "max_height": "",
                     "max_size": "",
                     "mime_types": ""
+                },
+                {
+                    "key": "field_5eeb22df99ecf",
+                    "label": "Hide Service Advisor",
+                    "name": "hide_service_advisor",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 0,
+                    "ui": 1,
+                    "ui_on_text": "",
+                    "ui_off_text": ""
                 }
             ]
         },
@@ -568,5 +587,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1578415164
+    "modified": 1592394405
 }
