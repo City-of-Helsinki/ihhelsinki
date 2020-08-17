@@ -37,7 +37,7 @@ class App extends React.Component<TComponentProps> {
 
         {/* popup card for legal disclaimer */}
         {staticStore!.showDisclaimer && (
-          <div className="App__disclaimer-popup">
+          <main className="App__disclaimer-popup">
             <div className="App-overlay">
               <div className={attachServiceClassName("App__disclaimer-container")}>
                 <div className={attachServiceClassName("App__disclaimer-header")}>
@@ -53,7 +53,7 @@ class App extends React.Component<TComponentProps> {
                 />
               </div>
             </div>
-          </div>
+          </main>
         )}
 
         {process.env.REACT_APP_VERSION === 'public' && (

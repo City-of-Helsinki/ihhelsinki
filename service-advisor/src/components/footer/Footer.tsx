@@ -12,7 +12,7 @@ const Footer = (props: TProps) => {
   const contactContent = processRawHTMLString(contact, [convertLineBreak, enableNewTabTargetForLink]);
 
   return (
-    <div className="Footer__container">
+    <footer className="Footer__container">
       <div className="Footer__logosGroup">
         {logos.map(src => (
           <div className="Footer-imageContainer" key={src}>
@@ -24,7 +24,7 @@ const Footer = (props: TProps) => {
         className="Footer__contact"
         dangerouslySetInnerHTML={{__html: contactContent}}
       />
-    </div>
+    </footer>
   );
 };
 
