@@ -5,7 +5,7 @@
 @if($notifications->have_posts())
   <aside class="alert-area">
     @while($notifications->have_posts()) @php $notifications->the_post() @endphp
-    <div class="alert alert-warning alert-dismissible show" role="alert">
+    <div class="alert alert-warning alert-dismissible show">
       <div class="container">
         <div class="notification-title">
           <span class="notification-icon"></span> <span>{{ the_title() }}</span>
