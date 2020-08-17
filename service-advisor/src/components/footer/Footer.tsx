@@ -16,7 +16,7 @@ const Footer = (props: TProps) => {
       <div className="Footer__logosGroup">
         {logos.map(src => (
           <div className="Footer-imageContainer" key={src}>
-            <img src={src} alt='' />
+            <img src={src} alt='International House Helsinki' />
           </div>
         ))}
       </div>
