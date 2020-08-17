@@ -15,11 +15,11 @@ const AppButtonRounded = (props: TProps) => {
 
   return (
       <button
-        className={attachServiceClassName("AppButtonRounded "+ buttonType)}
+        className={attachServiceClassName("AppButtonRounded AppButtonRounded__inner "+ buttonType)}
         onClick={clickHandler ? () => clickHandler(data) : undefined}
         {...rest}
       >
-          <div className={attachServiceClassName("AppButtonRounded__inner")}>{data.text}</div>
+          {data.text}
       </button>
     );
 }

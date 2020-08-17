@@ -50,16 +50,16 @@ class AppCircularButton extends React.PureComponent<TOwnProps, TState> {
         const labelClassWithPreset = attachServiceClassName(`AppButtonCircular__label ${this.props.preset}`);
 
     return (
-            <button className={classWithPreset} onClick={this.props.clickHandler}>
+            <div className={classWithPreset} onClick={this.props.clickHandler}>
                 <div className={labelClassWithPreset}>
                     <div className={attachServiceClassName("AppButtonCircular__label-icon")}>
                         {this.getButtonIcon() }
                     </div>
-                    <div>
+                    <button>
                         {this.state.label}
-                    </div>
+                    </button>
                 </div>
-            </button>
+            </div>
         );
     }
 }

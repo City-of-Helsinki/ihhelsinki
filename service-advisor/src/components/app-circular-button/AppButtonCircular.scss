@@ -19,6 +19,11 @@
     margin: 16px;
 
     &.App-service {
+      button {
+        color: $color-secondary-green;
+        background-color: white;
+        font-size: 28px;
+      }
       width: 200px;
       height: 200px;
       font-size: 28px;
