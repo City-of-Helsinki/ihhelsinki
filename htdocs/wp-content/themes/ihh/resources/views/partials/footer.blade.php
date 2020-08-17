@@ -12,7 +12,7 @@
   <div class="container">
     <div class="footer-content">
       <div class="footer-content-some">
-        <img src="@asset('images/logo_white.svg')" alt="IHH Logo" class="footer-logo">
+        <img src="@asset('images/logo_white.svg')" alt="International House Helsinki" class="footer-logo">
 
         <ul class="some-icons">
           <li><a href="https://twitter.com/ihhelsinki/" target="_blank"><i class="fa fa-twitter"></i></a></li>
