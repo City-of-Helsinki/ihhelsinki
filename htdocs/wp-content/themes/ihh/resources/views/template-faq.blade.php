@@ -18,7 +18,7 @@
         <button class="question-header collapsed"
                 data-toggle="collapse"
                 data-target="#answer_{{$id}}"
-                aria-expanded="true"
+                aria-expanded="false"
                 aria-controls="answer_{{$id}}">
           <span>{{the_sub_field('question')}}</span>
         </button>
