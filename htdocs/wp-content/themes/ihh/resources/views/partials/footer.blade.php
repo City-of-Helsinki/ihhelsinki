@@ -15,8 +15,8 @@
         <img src="@asset('images/logo_white.svg')" alt="International House Helsinki" class="footer-logo">
 
         <ul class="some-icons">
-          <li><a class="no-blank-icon" href="https://twitter.com/ihhelsinki/" target="_blank"><i class="fa fa-twitter"><span class="ihh-visually-hidden">External content: Twitter page for Internal House Helsinki</span></i></a></li>
-          <li><a class="no-blank-icon" href="https://www.youtube.com/channel/UCnJcLjsyMaXh1RA0vZi4V0A" target="_blank"><span class="ihh-visually-hidden">External content: Youtube page for Internal House Helsinki</span><i class="fa fa-youtube"></i></a></li>
+          <li><a class="no-blank-icon" href="https://twitter.com/ihhelsinki/" target="_blank"><i aria-hidden="true" class="fa fa-twitter"></i><span class="ihh-visually-hidden">External content: Twitter page for Internal House Helsinki</span></a></li>
+          <li><a class="no-blank-icon" href="https://www.youtube.com/channel/UCnJcLjsyMaXh1RA0vZi4V0A" target="_blank"><i aria-hidden="true" class="fa fa-youtube"></i><span class="ihh-visually-hidden">External content: Youtube page for Internal House Helsinki</span></a></li>
         </ul>
       </div>
 
