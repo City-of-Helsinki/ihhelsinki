@@ -43,7 +43,7 @@ class App extends React.Component<TComponentProps> {
                 <div className={attachServiceClassName("App__disclaimer-header")}>
                   <span>{languageStore!.getTranslatedText('disclaimer')}</span>
                   <button onClick={staticStore!.toggleDisclaimer}>
-                    <i className="fi-x">&nbsp;</i>
+                    <i className="fi-x"/>
                   </button>
                 </div>
                 <div className="App__disclaimer-divider" />

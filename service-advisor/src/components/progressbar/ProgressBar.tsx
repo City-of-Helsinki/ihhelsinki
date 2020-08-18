@@ -11,7 +11,7 @@ const calcStyle = (props:any) => ({
 
 const ProgressBar = (props:ProgressProps) => (
   <div className="ProgressBar__outer">
-    <div className="ProgressBar__inner" style={calcStyle(props)}>&nbsp;</div>
+    <div className="ProgressBar__inner" style={calcStyle(props)} />
   </div>
 );
 

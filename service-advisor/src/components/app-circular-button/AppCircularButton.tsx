@@ -38,10 +38,10 @@ class AppCircularButton extends React.PureComponent<TOwnProps, TState> {
     getButtonIcon = () => {
         switch(this.props.preset) {
             case AppCircularButtonPreset.CLOSE:
-                return  <i className="fi-x">&nbsp;</i>;
+                return  <i className="fi-x" />;
             case AppCircularButtonPreset.BACK:
-                return  <i className="fi-play">&nbsp;</i>;
-            default: return <i className="fi-x">&nbsp;</i>;
+                return  <i className="fi-play" />;
+            default: return <i className="fi-x" />;
         }
     }
 
