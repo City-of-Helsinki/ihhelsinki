@@ -50,3 +50,8 @@ main p a {
     text-decoration: none !important;
   }
 }
+
+body > nav {
+  max-height: 100vh;
+  overflow-y: scroll;
+}
