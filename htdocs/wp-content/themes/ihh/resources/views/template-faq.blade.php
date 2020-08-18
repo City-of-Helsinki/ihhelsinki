@@ -25,7 +25,6 @@
 
         <div id="answer_{{$id}}"
              class="collapse question-answer"
-             aria-labelledby="question_{{$id}}"
              data-parent="#faqs">
           {{the_sub_field('answer')}}
         </div>
