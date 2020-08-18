@@ -35,6 +35,18 @@
       height: auto;
     }
 
+    > a {
+      flex: 1;
+      display: flex;
+      flex-flow: column;
+      flex-wrap: wrap;
+      background: #91c8c2;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
     h2 {
       font-size: 16px;
       line-height: 19px;
@@ -45,7 +57,7 @@
       flex: 1;
       hyphens: auto;
 
-      a {
+      a:not(:first-child) {
         color: #231f00;
 
         &:hover {
