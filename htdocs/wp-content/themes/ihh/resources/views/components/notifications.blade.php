@@ -8,7 +8,7 @@
     <div class="alert alert-warning alert-dismissible show">
       <div class="container">
         <div class="notification-title">
-          <span class="notification-icon"></span> <span>{{ the_title() }}</span>
+          <span class="notification-icon"><span class="ihh-visually-hidden">Important notice</span></span> <span>{{ the_title() }}</span>
           <button type="button" class="close" data-dismiss="alert" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
