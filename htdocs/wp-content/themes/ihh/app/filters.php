@@ -151,15 +151,6 @@ add_filter( 'dude-twitter-feed/user_tweets_parameters', function ( $args ) {
 } );
 
 /**
- * Filter language-switcher output
- */
-add_filter( 'pll_the_languages_args', function ( $args ) {
-    $args['display_names_as'] = 'slug';
-
-    return $args;
-} );
-
-/**
  * Mail
  */
 
