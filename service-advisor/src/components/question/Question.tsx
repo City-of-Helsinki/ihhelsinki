@@ -33,17 +33,13 @@ const getQuestionDescriptionElements = (q: IQuestion) => {
 
 const Question = (props: IStateQuestionProps) => (
     <div className={attachServiceClassName("Question")}>
-      <p>
-          <div className={attachServiceClassName("Question__text")}> { props.question.title}</div>
-          <div className={attachServiceClassName("Question__descriptions")}>
-              {getQuestionDescriptionElements(props.question)}
-          </div>
-      </p>
-      <p>
-          <div className="Question_options">
-              {getQuestionOptionElements(props)}
-          </div>
-      </p>
+      <div className={attachServiceClassName("Question__text")}> { props.question.title}</div>
+      <div className={attachServiceClassName("Question__descriptions")}>
+        {getQuestionDescriptionElements(props.question)}
+      </div>
+      <div className="Question_options">
+          {getQuestionOptionElements(props)}
+      </div>
     </div>
   );
 
