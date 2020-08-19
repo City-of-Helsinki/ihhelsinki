@@ -171,11 +171,18 @@ add_filter('wp_nav_menu_items', function($items, $args){
     }
     if( $args->theme_location == 'primary_navigation' ){
         $from = '<a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="button" href="#pll_switcher">'.pll_current_language('name').' <b class="caret"></b></a>';
-        $to = '<button class="nav-link dropdown-toggle custom-language-selector" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">'.pll_current_language('name').'<b class="caret"></b></button>';
+        $to = '<button class="nav-link dropdown-toggle custom-language-selector" data-toggle="dropdown" aria-haspopup="true" aria-owns="language-selection-list" aria-expanded="false">'.pll_current_language('name').'<b class="caret"></b></button>';
+
+        $ulListFrom = '<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">';
+        $ulListTo = '<ul id="language-selection-list" class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">';
 
         if(strpos($items, $from) !== false){
             $items = str_replace($from, $to, $items);
         }
+        if(strpos($items, $ulListFrom) !== false){
+            $items = str_replace($ulListFrom, $ulListTo, $items);
+        }
+
         return $items;
     }
     return $items;
