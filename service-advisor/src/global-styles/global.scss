@@ -39,3 +39,12 @@ ol, ul {
 li {
   line-height: initial;
 }
+
+.visually-hidden:not(:focus):not(:focus-within):not(:active) {
+  color: transparent;
+  background: transparent;
+  border: transparent;
+  text-decoration-color: transparent;
+  box-shadow: none;
+}
+

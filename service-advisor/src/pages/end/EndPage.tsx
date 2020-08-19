@@ -144,9 +144,11 @@ class EndPage extends React.Component<TPageProps, TPageState> {
               <form className="EndPage__email" onSubmit={this.sendAsEmail}>
                 <h2>{languageStore!.getTranslatedText('sendAsEmail')}</h2>
                 <div>
+                  <label htmlFor="email" className="visually-hidden">Email</label>
                   <AppInput
                     errorMessage={languageStore!.getTranslatedText('invalidEmail')}
                     inputProps={{
+                      id: 'email',
                       type: 'email',
                       value: email,
                       onChange: this.onChangeEmail
