@@ -5,8 +5,10 @@
   background: #fff;
 
   .navbar-nav {
-    .pll-parent-menu-item > a {
+    .pll-parent-menu-item > button {
       color: $primary;
+      background-color: inherit;
+      border: 0;
     }
 
     .nav-item {

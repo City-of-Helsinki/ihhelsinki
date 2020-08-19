@@ -52,6 +52,8 @@ main p a {
 }
 
 body > nav {
-  max-height: 100vh;
-  overflow-y: scroll;
+  @include media-breakpoint-down("sm") {
+    max-height: 100vh;
+    overflow-y: auto;
+  }
 }
