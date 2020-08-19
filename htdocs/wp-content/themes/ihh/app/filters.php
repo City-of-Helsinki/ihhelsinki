@@ -171,7 +171,7 @@ add_filter('wp_nav_menu_items', function($items, $args){
     }
     if( $args->theme_location == 'primary_navigation' ){
         $from = '<a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="button" href="#pll_switcher">'.pll_current_language('name').' <b class="caret"></b></a>';
-        $to = '<button class="nav-link dropdown-toggle custom-language-selector" data-toggle="dropdown" aria-haspopup="true" aria-owns="language-selection-list" aria-expanded="false">'.pll_current_language('name').'<b class="caret"></b></button>';
+        $to = '<button class="nav-link dropdown-toggle custom-language-selector" data-toggle="dropdown" aria-haspopup="true" aria-owns="language-selection-list"><span aria-hidden="true">'.pll_current_language('name').'</span><span class="ihh-visually-hidden">'.pll_current_language("name").' '.pll__('Switch language').'</span><b class="caret"></b></button>';
 
         $ulListFrom = '<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">';
         $ulListTo = '<ul id="language-selection-list" class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">';
