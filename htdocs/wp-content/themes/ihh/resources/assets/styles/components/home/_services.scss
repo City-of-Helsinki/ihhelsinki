@@ -67,8 +67,7 @@
           padding: 20px 10px;
         }
 
-        @include transition(all, 0.3s);
-
+        transition: background, 0.3s;
         position: relative;
         flex: 1;
         display: flex;

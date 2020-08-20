@@ -111,8 +111,7 @@
 
       > li {
         a {
-          @include transition(all, 0.3s);
-
+          transition: background 0.3s;
           display: flex;
           align-items: center;
           justify-content: center;

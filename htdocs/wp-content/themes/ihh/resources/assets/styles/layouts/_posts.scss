@@ -21,8 +21,7 @@
       flex: 0 0 31%;
     }
 
-    @include transition(all, 0.3s);
-
+    transition: box-shadow, 0.3s;
     display: flex;
     flex-flow: column;
     font-family: $font-open-sans;

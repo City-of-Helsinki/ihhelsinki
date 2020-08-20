@@ -119,8 +119,7 @@
         margin-right: 0;
       }
 
-      @include transition(all, 0.3s);
-
+      transition: background, 0.3s;
       color: #fff;
       text-transform: uppercase;
       background: $primary-dark;

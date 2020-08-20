@@ -40,8 +40,7 @@
     }
 
     .nav-link {
-      @include transition(all, 0.3s);
-
+      transition: color, 0.3s, border-bottom-color, 0.3s;
       color: $black;
       text-transform: uppercase;
       font-size: 0.9rem;
