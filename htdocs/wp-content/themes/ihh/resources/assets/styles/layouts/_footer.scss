@@ -25,7 +25,7 @@
 
 .footer {
   @include media-breakpoint-down("sm") {
-    font-size: 14px;
+    font-size: 1rem;
   }
 
   position: relative;
@@ -70,7 +70,7 @@
 
     h4 {
       font-family: $font-source-sans;
-      font-size: 14px;
+      font-size: 1rem;
       line-height: 27px;
       font-weight: bold;
     }
@@ -123,7 +123,7 @@
 
           i {
             color: #fff;
-            font-size: 22px;
+            font-size: 1.571rem;
           }
 
           &:hover {
@@ -136,6 +136,8 @@
   }
 
   .footer-content-info {
+    font-size: 1rem;
+
     @include media-breakpoint-down("sm") {
       @include make-col(12);
 
