@@ -3,7 +3,7 @@ import { IStaticContent } from './../typings/static.d';
 import { IQuestion } from '../typings/question';
 import { IAnswerResult } from "../typings/answer";
 
-const baseUrl = process.env.REACT_APP_API_URL || '';
+const baseUrl = 'https://ihh.local/wp-json/serviceadvisor/v1';
 
 interface QuestionResponse {
   static: IStaticContent;
@@ -60,7 +60,7 @@ const request = async <T>(
   } catch (err) {
     console.info(err);
   }
-} 
+}
 
 export const TIME_ELAPSED = 60000;
 
