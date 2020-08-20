@@ -3,7 +3,7 @@ import { IStaticContent } from './../typings/static.d';
 import { IQuestion } from '../typings/question';
 import { IAnswerResult } from "../typings/answer";
 
-const baseUrl = 'https://ihh.local/wp-json/serviceadvisor/v1';
+const baseUrl = process.env.REACT_APP_API_URL || '';
 
 interface QuestionResponse {
   static: IStaticContent;
