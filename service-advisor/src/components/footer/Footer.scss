@@ -36,6 +36,11 @@
     text-overflow: ellipsis;
     line-height: 16px;
 
+    .external_link {
+      color: white;
+      text-decoration: underline;
+    }
+
     @media only screen and (min-width: 600px) {
       width: 50%;
     }
