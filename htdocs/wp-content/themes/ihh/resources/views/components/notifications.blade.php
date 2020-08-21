@@ -3,7 +3,7 @@
 @endphp
 
 @if($notifications->have_posts())
-  <aside class="alert-area">
+  <aside tabindex="0" id="ihh-site-notification" class="alert-area">
     @while($notifications->have_posts()) @php $notifications->the_post() @endphp
     <div class="alert alert-warning alert-dismissible show">
       <div class="container">
