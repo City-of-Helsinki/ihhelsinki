@@ -40,9 +40,13 @@
       }
 
       &:hover,
-      &:focus,
       &:active {
         text-decoration: none;
+      }
+
+      &:focus {
+        text-decoration: none;
+        outline: 3px solid #00ffad35;
       }
 
       &.collapsed {
