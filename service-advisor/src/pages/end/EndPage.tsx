@@ -126,7 +126,7 @@ class EndPage extends React.Component<TPageProps, TPageState> {
             : <FadeLoader loading radius={50} />
           }
 
-          {1 === 1 && (
+          {process.env.REACT_APP_VERSION === 'public' && (
             <>
               <div>
                 <AppButtonRounded
