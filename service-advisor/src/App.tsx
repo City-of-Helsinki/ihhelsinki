@@ -42,7 +42,10 @@ class App extends React.Component<TComponentProps> {
               <div className={attachServiceClassName("App__disclaimer-container")}>
                 <div className={attachServiceClassName("App__disclaimer-header")}>
                   <span>{languageStore!.getTranslatedText('disclaimer')}</span>
-                  <button onClick={staticStore!.toggleDisclaimer} aria-label={'close'}>
+                  <button
+                      onClick={staticStore!.toggleDisclaimer}
+                      aria-label={languageStore!.getTranslatedText('close')}
+                  >
                     <i className="fi-x"/>
                   </button>
                 </div>
@@ -56,8 +59,9 @@ class App extends React.Component<TComponentProps> {
           </main>
         )}
 
-        <Footer logos={staticStore!.logos} contact={staticStore!.contact} />
-
+        {process.env.REACT_APP_VERSION === 'public' && (
+          <Footer logos={staticStore!.logos} contact={staticStore!.contact} />
+        )}
       </div>
     );
   }
