@@ -19,7 +19,8 @@
                 data-toggle="collapse"
                 data-target="#answer_{{$id}}"
                 aria-expanded="false"
-                aria-controls="answer_{{$id}}">
+                aria-controls="answer_{{$id}}"
+                aria-owns="answer_{{$id}}">
           <span>{{the_sub_field('question')}}</span>
         </button>
 
