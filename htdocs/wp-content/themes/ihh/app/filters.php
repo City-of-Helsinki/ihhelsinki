@@ -187,3 +187,6 @@ add_filter('wp_nav_menu_items', function($items, $args){
     }
     return $items;
 } ,9, 2);
+
+add_filter('acf_the_content', 'eae_encode_emails');
+add_filter('acf/load_value', 'eae_encode_emails');
