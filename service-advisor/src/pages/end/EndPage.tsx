@@ -126,7 +126,7 @@ class EndPage extends React.Component<TPageProps, TPageState> {
             : <FadeLoader loading radius={50} />
           }
 
-          {process.env.REACT_APP_VERSION === 'public' && (
+          {1 === 1 && (
             <>
               <div>
                 <AppButtonRounded
@@ -137,6 +137,7 @@ class EndPage extends React.Component<TPageProps, TPageState> {
                 <AppButtonRounded
                   buttonType='default'
                   data={{ text: languageStore!.getTranslatedText('downloadPdf') }}
+                  title={languageStore!.getTranslatedText('downloadPdf')}
                   clickHandler={this.savePdf}
                 />
               </div>
