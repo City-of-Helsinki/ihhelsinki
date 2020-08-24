@@ -50,6 +50,10 @@
       &:hover {
         border-bottom-color: $primary;
       }
+
+      &:focus {
+        border-bottom-color: $primary;
+      }
     }
   }
 
@@ -71,6 +75,11 @@
         font-size: 0.8rem;
 
         &:hover {
+          border-bottom-color: transparent;
+          color: $primary;
+        }
+
+        &:focus {
           border-bottom-color: transparent;
           color: $primary;
         }

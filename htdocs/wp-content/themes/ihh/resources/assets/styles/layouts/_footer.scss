@@ -129,6 +129,11 @@
             background: lighten($primary, 10%);
             text-decoration: none;
           }
+
+          &:focus {
+            background: lighten($primary, 10%);
+            text-decoration: none;
+          }
         }
       }
     }

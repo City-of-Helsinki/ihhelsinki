@@ -133,6 +133,11 @@
         text-decoration: none;
         background: lighten($primary-dark, 10%);
       }
+
+      &:focus {
+        text-decoration: none;
+        background: lighten($primary-dark, 10%);
+      }
     }
 
     &.share {
