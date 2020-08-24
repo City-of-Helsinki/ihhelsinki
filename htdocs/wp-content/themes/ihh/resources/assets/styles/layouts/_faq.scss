@@ -20,6 +20,10 @@
     font-family: $font-open-sans;
     border-bottom: 1px solid #d8d8d8;
 
+    &:focus-within {
+      background: $kuvittaja-green-light;
+    }
+
     .question-header {
       @extend .btn;
       @extend .btn-link;
@@ -69,7 +73,7 @@
       padding: 20px 20px 20px;
       font-size: 14px;
       //color: #6d6d6d;
-      background: $kuvittaja-pink-light;
+      background: $kuvittaja-pink;
     }
 
     &:nth-child(even) {
