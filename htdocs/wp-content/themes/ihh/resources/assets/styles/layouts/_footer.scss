@@ -86,6 +86,16 @@
 
       order: 3;
       padding: 15px 50px;
+
+      &.hide-on-mobile {
+        display: none;
+      }
+    }
+
+    @include media-breakpoint-up("md") {
+      &.hide-on-desktop {
+        display: none;
+      }
     }
 
     @include make-col(3);
