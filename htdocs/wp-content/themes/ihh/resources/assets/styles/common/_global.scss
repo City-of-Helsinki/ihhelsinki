@@ -73,7 +73,7 @@ a {
 }
 
 main p a {
-  color: #015149;
+  color: $kuvittaja-green;
   text-decoration: underline !important;
 
   &:hover {
