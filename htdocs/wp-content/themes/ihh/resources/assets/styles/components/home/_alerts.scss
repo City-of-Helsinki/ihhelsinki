@@ -1,4 +1,13 @@
 .alert-area {
+  a {
+    color: $kuvittaja-green !important;
+    text-decoration: underline !important;
+
+    &:hover {
+      text-decoration: none !important;
+    }
+  }
+
   .alert {
     @include media-breakpoint-down("sm") {
       padding-top: 10px;

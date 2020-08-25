@@ -12,10 +12,13 @@
     <div class="container">
       <div class="testimonial">
         <div class="content">
-          <p>{{ the_sub_field('body') }}</p>
+          <p>{{ the_sub_field('body')}}</p>
         </div>
         <a href="{{ the_sub_field('video_link') }}" class="image venobox" data-autoplay="true" data-vbtype="video">
-          <img src="{{ the_sub_field('image') }}" alt="">
+          @php
+            $image = get_sub_field('image');
+          @endphp
+          <img src="{{ $image['url'] }}" alt="{{$image['alt']}}" >
         </a>
       </div>
     </div>

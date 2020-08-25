@@ -25,7 +25,7 @@
 
 .footer {
   @include media-breakpoint-down("sm") {
-    font-size: 14px;
+    font-size: 1rem;
   }
 
   position: relative;
@@ -70,7 +70,7 @@
 
     h4 {
       font-family: $font-source-sans;
-      font-size: 14px;
+      font-size: 1rem;
       line-height: 27px;
       font-weight: bold;
     }
@@ -86,6 +86,16 @@
 
       order: 3;
       padding: 15px 50px;
+
+      &.hide-on-mobile {
+        display: none;
+      }
+    }
+
+    @include media-breakpoint-up("md") {
+      &.hide-on-desktop {
+        display: none;
+      }
     }
 
     @include make-col(3);
@@ -111,8 +121,7 @@
 
       > li {
         a {
-          @include transition(all, 0.3s);
-
+          transition: background 0.3s;
           display: flex;
           align-items: center;
           justify-content: center;
@@ -123,10 +132,15 @@
 
           i {
             color: #fff;
-            font-size: 22px;
+            font-size: 1.571rem;
           }
 
           &:hover {
+            background: lighten($primary, 10%);
+            text-decoration: none;
+          }
+
+          &:focus {
             background: lighten($primary, 10%);
             text-decoration: none;
           }
@@ -136,6 +150,8 @@
   }
 
   .footer-content-info {
+    font-size: 1rem;
+
     @include media-breakpoint-down("sm") {
       @include make-col(12);
 

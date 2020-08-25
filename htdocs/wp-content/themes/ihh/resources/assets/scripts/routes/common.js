@@ -8,6 +8,13 @@ export default {
     $('#services-select').change(function (e) {
       window.location.href = e.target.value;
     })
+
+    $('#skip-to-main').click(function(e){
+      if($('#ihh-site-notification').length) {
+        e.preventDefault();
+        $('#ihh-site-notification').focus();
+      }
+    });
   },
   finalize() {
   },

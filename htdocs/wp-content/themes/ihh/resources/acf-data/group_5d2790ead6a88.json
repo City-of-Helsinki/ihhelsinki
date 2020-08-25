@@ -44,7 +44,7 @@
                     "key": "field_5d27910ee4974",
                     "label": "Answer",
                     "name": "answer",
-                    "type": "textarea",
+                    "type": "wysiwyg",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -54,10 +54,10 @@
                         "id": ""
                     },
                     "default_value": "",
-                    "placeholder": "",
-                    "maxlength": "",
-                    "rows": 4,
-                    "new_lines": ""
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 1,
+                    "delay": 0
                 }
             ]
         }
@@ -79,5 +79,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1562874240
+    "modified": 1597990405
 }

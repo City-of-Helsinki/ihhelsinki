@@ -17,3 +17,73 @@ body {
     }
   }
 }
+
+a {
+  &[target="_blank"]::before {
+    content: "\f08e";
+    font-family: FontAwesome, sans-serif;
+    margin: 0 5px 0 3px;
+  }
+
+  &.no-blank-icon::before {
+    content: "";
+    margin: 0;
+  }
+
+  &.skip-main {
+    left: -999px;
+    position: absolute;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    z-index: -999;
+  }
+
+  &.skip-main:focus,
+  &.skip-main:active {
+    color: #fff;
+    background-color: #000;
+    left: auto;
+    top: auto;
+    width: 30%;
+    height: auto;
+    overflow: auto;
+    margin: 10px 35%;
+    padding: 5px;
+    border-radius: 15px;
+    border: 4px solid yellow;
+    text-align: center;
+    font-size: 1.2em;
+    z-index: 999;
+  }
+}
+
+.ihh-visually-hidden {
+  position: absolute;
+  height: 1px;
+  width: 1px;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
+}
+
+main p a {
+  color: $kuvittaja-green;
+  text-decoration: underline !important;
+
+  &:hover {
+    text-decoration: none !important;
+  }
+}
+
+body > nav {
+  @include media-breakpoint-down("sm") {
+    max-height: 100vh;
+    overflow-y: auto;
+  }
+}

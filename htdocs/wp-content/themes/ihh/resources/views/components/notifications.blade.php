@@ -3,12 +3,12 @@
 @endphp
 
 @if($notifications->have_posts())
-  <div class="alert-area">
+  <aside tabindex="0" id="ihh-site-notification" class="alert-area">
     @while($notifications->have_posts()) @php $notifications->the_post() @endphp
-    <div class="alert alert-warning alert-dismissible show" role="alert">
+    <div class="alert alert-warning alert-dismissible show">
       <div class="container">
         <div class="notification-title">
-          <span class="notification-icon"></span> <span>{{ the_title() }}</span>
+          <span class="notification-icon"><span class="ihh-visually-hidden">Important notice</span></span> <span>{{ the_title() }}</span>
           <button type="button" class="close" data-dismiss="alert" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
@@ -21,5 +21,5 @@
       </div>
     </div>
     @endwhile
-  </div>
+  </aside>
 @endif
