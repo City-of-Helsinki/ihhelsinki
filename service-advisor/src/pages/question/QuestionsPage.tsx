@@ -51,7 +51,7 @@ class QuestionsPage extends React.Component<TComponentProps> {
 
     return (
       <>
-        <div className={attachServiceClassName("QuestionPage")}>
+        <div tabIndex={0} aria-live="polite" className={attachServiceClassName("QuestionPage")}>
           <ProgressBar at={questionStore!.progress}/>
           <Question clickHandler={this.onQuestionClickHandler} question={question}/>
           <div className={"Action_buttons__container"}>
