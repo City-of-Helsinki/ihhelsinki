@@ -11,6 +11,7 @@
   font-size: 30px;
   font-weight: 400;
   display: flex;
+  flex-flow: column;
   justify-content: center;
   align-items: center;
   padding: 12px;
@@ -35,6 +36,15 @@
 
     &.App-service {
       font-size: 36px;
+    }
+  }
+
+  span {
+    display: block;
+    width: 100%;
+
+    &.button-suplementary {
+      font-size: 0.75rem;
     }
   }
 }

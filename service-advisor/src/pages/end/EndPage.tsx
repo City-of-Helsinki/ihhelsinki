@@ -136,7 +136,7 @@ class EndPage extends React.Component<TPageProps, TPageState> {
                 />
                 <AppButtonRounded
                   buttonType='default'
-                  data={{ text: languageStore!.getTranslatedText('downloadPdf') }}
+                  data={{ text: languageStore!.getTranslatedText('downloadPdf'), altText: languageStore!.getTranslatedText('pdfSize')  }}
                   title={languageStore!.getTranslatedText('downloadPdf')}
                   clickHandler={this.savePdf}
                 />
