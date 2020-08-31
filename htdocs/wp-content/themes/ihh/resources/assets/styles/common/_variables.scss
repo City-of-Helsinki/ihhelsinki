@@ -5,7 +5,6 @@ $font-roboto: "Roboto", sans-serif !default;
 $font-source-sans: "Source Sans Pro", sans-serif !default;
 $font-open-sans: "Open Sans", sans-serif !default;
 $font-nunito: "Nunito", sans-serif !default;
-$font-link-green: #015149;
 
 $kuvittaja-green: rgb(1, 160, 144) !default;
 $kuvittaja-darker-green: rgb(48, 129, 118) !default;
@@ -20,7 +19,7 @@ $kuvittaja-yellow-light: rgb(247, 237, 152) !default;
 $black: #231f20 !default;
 $gray-900: $black !default;
 $primary-dark: $kuvittaja-green !default;
-$secondary-dark: $font-link-green !default;
+$secondary-dark: $kuvittaja-darker-green !default;
 
 $theme-colors: (
   primary: $kuvittaja-green,
