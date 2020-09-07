@@ -79,4 +79,9 @@ class App extends Controller {
 
         return get_the_title();
     }
+
+    public static function service_status(){
+        return get_cached_service_status('service_status');
+    }
+
 }
