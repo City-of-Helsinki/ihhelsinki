@@ -54,7 +54,6 @@
       color: #231f00;
       margin: 0 0 10px 0;
       flex: 1;
-      hyphens: auto;
 
       a:not(:first-child) {
         color: #231f00;
@@ -110,10 +109,10 @@
     .read-more {
       @extend .btn;
 
-      background: $primary-dark;
+      background: #fff;
       font-family: $font-open-sans;
       font-weight: 500;
-      color: #fff;
+      color: black;
       text-align: center;
       display: block;
       margin: 30px auto 0 auto;
