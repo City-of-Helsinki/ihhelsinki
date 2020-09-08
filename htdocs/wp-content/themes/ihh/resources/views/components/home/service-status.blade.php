@@ -1,5 +1,5 @@
 @php
-  $reservations = \App::reservation_status();
+  $reservations = \App::service_status();
 @endphp
 
 
@@ -30,7 +30,7 @@
       </table>
 
     </div>
-    @endif;
+    @endif
   </div>
 </section>
 

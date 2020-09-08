@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use Sober\Controller\Controller;
+use function IHH\get_cached_service_status;
 
 class App extends Controller {
 

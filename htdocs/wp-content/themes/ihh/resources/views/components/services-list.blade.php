@@ -1,6 +1,7 @@
 @php
   $services = \App::services();
-  $background_img = get_field('image') ? get_field('image') : false
+  $background_img = get_field('image') ? get_field('image') : false;
+  $service_provider = get_field('service_provider_logo');
 @endphp
 
 <section class="services-list">
@@ -19,10 +20,19 @@
           <h2>{{ the_title() }}</h2>
           {{ the_content() }}
 
+          @if($service_provider)
+            <div>
+              <h3>Service provided by:</h3>
+              <img src="@php echo $service_provider['url'] @endphp" alt="@php echo $service_provider['alt'] @endphp">
+            </div>
+          @endif
+
           @if(get_field('link'))
-            <a href="{{ the_field('link') }}" target="_blank" class="read-more">{!! pll__('Read More') !!}</a>
+            <a href="{{ the_field('link') }}" target="_blank" class="read-more">{!! pll__('Read More about the service') !!}
+            <span class="ihh-visually-hidden">This link leads to external webpage</span></a>
           @endif
         </div>
+
       </div>
     </div>
   @endif

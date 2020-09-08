@@ -1,7 +1,7 @@
 @php
   $services = \App::services();
 
-  $background_img = get_field('image') ? get_field('image') : false
+  $background_img = get_field('image') ? get_field('image') : false;
 @endphp
 
 <section class="services-list" id="faqs">
@@ -24,9 +24,18 @@
             <div class="services-list-body-text" @if(get_field('color')) style="background-color: {!! get_field('color') !!}" @endif>
               <h2>{{ the_title() }}</h2>
               {{ the_content() }}
+              @php
+                $service_provider = get_field('service_provider_logo');
+              @endphp
+              @if($service_provider)
+                <div>
+                  <h3>Service provided by:</h3>
+                  <img src="@php echo $service_provider['url'] @endphp" alt="@php echo $service_provider['alt'] @endphp">
+                </div>
+              @endif
 
               @if(get_field('link'))
-                <a href="{{ the_field('link') }}" target="_blank" class="read-more">{!! pll__('Read More') !!}</a>
+                <a href="{{ the_field('link') }}" target="_blank" class="read-more">{!! pll__('Read More about this service') !!}</a>
               @endif
             </div>
           </div>
