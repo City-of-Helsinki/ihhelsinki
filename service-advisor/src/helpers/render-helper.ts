@@ -18,7 +18,7 @@ export const convertLineBreak: RawHTMLProcessor = (htmlString: string = '') => {
 }
 
 export const enableNewTabTargetForLink: RawHTMLProcessor = (htmlString: string = '') => {
-  return htmlString.replace(/<a/g, "<a target='_blank'");
+  return htmlString.replace(/<a/g, "<a class='external_link' target='_blank'");
 }
 
 export const processRawHTMLString = (htmlString: string = '', methods: RawHTMLProcessor[]): string => {

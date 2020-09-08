@@ -9,7 +9,7 @@
   <article class="content-block container">
     @include('partials.content.header')
     @include('partials.content.page')
-    @include('components.services-list')
+    @include('components.services-accordion')
   </article>
   @endwhile
 @endsection

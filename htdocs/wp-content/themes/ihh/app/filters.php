@@ -151,15 +151,6 @@ add_filter( 'dude-twitter-feed/user_tweets_parameters', function ( $args ) {
 } );
 
 /**
- * Filter language-switcher output
- */
-add_filter( 'pll_the_languages_args', function ( $args ) {
-    $args['display_names_as'] = 'slug';
-
-    return $args;
-} );
-
-/**
  * Mail
  */
 
@@ -170,3 +161,32 @@ add_filter( 'wp_mail_from', function () {
 add_filter( 'wp_mail_from_name', function () {
     return "International House Helsinki";
 } );
+
+/**
+ * Change menu language selector to button. The pll_the_languages-function won't work on menu-dropdown widget.
+ */
+add_filter('wp_nav_menu_items', function($items, $args){
+    if(!function_exists('pll_the_languages')){
+        return $items;
+    }
+    if( $args->theme_location == 'primary_navigation' ){
+        $from = '<a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="button" href="#pll_switcher">'.pll_current_language('name').' <b class="caret"></b></a>';
+        $to = '<button class="nav-link dropdown-toggle custom-language-selector" data-toggle="dropdown" aria-haspopup="true" aria-owns="language-selection-list"><span aria-hidden="true">'.pll_current_language('name').'</span><span class="ihh-visually-hidden">'.pll_current_language("name").' '.pll__('Switch language').'</span><b class="caret"></b></button>';
+
+        $ulListFrom = '<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">';
+        $ulListTo = '<ul id="language-selection-list" class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">';
+
+        if(strpos($items, $from) !== false){
+            $items = str_replace($from, $to, $items);
+        }
+        if(strpos($items, $ulListFrom) !== false){
+            $items = str_replace($ulListFrom, $ulListTo, $items);
+        }
+
+        return $items;
+    }
+    return $items;
+} ,9, 2);
+
+add_filter('acf_the_content', 'eae_encode_emails');
+add_filter('acf/load_value', 'eae_encode_emails');

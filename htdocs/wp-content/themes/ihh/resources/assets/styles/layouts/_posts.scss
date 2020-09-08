@@ -21,8 +21,7 @@
       flex: 0 0 31%;
     }
 
-    @include transition(all, 0.3s);
-
+    transition: box-shadow, 0.3s;
     display: flex;
     flex-flow: column;
     font-family: $font-open-sans;
@@ -35,6 +34,18 @@
       height: auto;
     }
 
+    > a {
+      flex: 1;
+      display: flex;
+      flex-flow: column;
+      flex-wrap: wrap;
+      background: #91c8c2;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
     h2 {
       font-size: 16px;
       line-height: 19px;
@@ -45,10 +56,16 @@
       flex: 1;
       hyphens: auto;
 
-      a {
+      a:not(:first-child) {
         color: #231f00;
 
         &:hover {
+          color: $primary-dark;
+          text-decoration: none;
+        }
+
+        &:focus,
+        &:focus-within {
           color: $primary-dark;
           text-decoration: none;
         }
@@ -108,9 +125,18 @@
         color: #fff;
         background: darken($primary-dark, 10%);
       }
+
+      &:focus {
+        color: #fff;
+        background: darken($primary-dark, 10%);
+      }
     }
 
     &:hover {
+      box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    &:focus {
       box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
     }
   }

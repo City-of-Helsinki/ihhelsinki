@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "27a4629626b7536c02a2743fcd0f6e12",
+    "content-hash": "82fc7062c79d22a7f4dea621e0cb31db",
     "packages": [
         {
             "name": "acf/advanced-custom-fields",
@@ -999,6 +999,24 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/clean-image-filenames/"
+        },
+        {
+            "name": "wpackagist-plugin/email-address-encoder",
+            "version": "1.0.21",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/email-address-encoder/",
+                "reference": "tags/1.0.21"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/email-address-encoder.1.0.21.zip"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/email-address-encoder/"
         },
         {
             "name": "wpackagist-plugin/google-site-kit",

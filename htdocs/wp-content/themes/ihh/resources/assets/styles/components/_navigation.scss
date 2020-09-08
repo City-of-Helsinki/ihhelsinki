@@ -5,8 +5,10 @@
   background: #fff;
 
   .navbar-nav {
-    .pll-parent-menu-item > a {
+    .pll-parent-menu-item > button {
       color: $primary;
+      background-color: inherit;
+      border: 0;
     }
 
     .nav-item {
@@ -38,8 +40,7 @@
     }
 
     .nav-link {
-      @include transition(all, 0.3s);
-
+      transition: color, 0.3s, border-bottom-color, 0.3s;
       color: $black;
       text-transform: uppercase;
       font-size: 0.9rem;
@@ -47,6 +48,10 @@
       line-height: 1;
 
       &:hover {
+        border-bottom-color: $primary;
+      }
+
+      &:focus {
         border-bottom-color: $primary;
       }
     }
@@ -70,6 +75,11 @@
         font-size: 0.8rem;
 
         &:hover {
+          border-bottom-color: transparent;
+          color: $primary;
+        }
+
+        &:focus {
           border-bottom-color: transparent;
           color: $primary;
         }

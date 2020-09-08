@@ -41,7 +41,7 @@ class QuestionsPage extends React.Component<TComponentProps> {
 
     if (questionStore!.isLast) {
       navigate('/questions/end');
-    }     
+    }
   };
 
   render() {
@@ -51,21 +51,23 @@ class QuestionsPage extends React.Component<TComponentProps> {
 
     return (
       <>
-        <div className={attachServiceClassName("QuestionPage")}>
+        <div tabIndex={0} aria-live="polite" className={attachServiceClassName("QuestionPage")}>
           <ProgressBar at={questionStore!.progress}/>
-          {index > 0
-            ? <AppButtonCircular
-                label={languageStore!.getTranslatedText('back')}
-                preset={AppCircularButtonPreset.BACK}
-                clickHandler={this.goBackQuestion} />
-            : null
-          }
-          <AppButtonCircular
-            label={languageStore!.getTranslatedText('close')}
-            preset={AppCircularButtonPreset.CLOSE}
-            clickHandler={this.closeApp}
-          />
           <Question clickHandler={this.onQuestionClickHandler} question={question}/>
+          <div className={"Action_buttons__container"}>
+            {index > 0
+                ? <AppButtonCircular
+                    label={languageStore!.getTranslatedText('back')}
+                    preset={AppCircularButtonPreset.BACK}
+                    clickHandler={this.goBackQuestion} />
+                : null
+            }
+            <AppButtonCircular
+                label={languageStore!.getTranslatedText('close')}
+                preset={AppCircularButtonPreset.CLOSE}
+                clickHandler={this.closeApp}
+            />
+          </div>
         </div>
         <AppCloseDialog />
       </>

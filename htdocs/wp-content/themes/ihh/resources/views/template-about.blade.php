@@ -18,7 +18,10 @@
           @while(have_rows('links')) @php the_row() @endphp
           <div class="service-link">
             <a href="{{the_sub_field('link')}}" target="_blank">
-              <img src="{{the_sub_field('logo')}}" alt="">
+              @php
+                $image = get_sub_field('logo');
+              @endphp
+              <img src="{{ $image['url'] }}" alt="{{$image['alt']}}" >
             </a>
           </div>
           @endwhile

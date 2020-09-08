@@ -119,8 +119,7 @@
         margin-right: 0;
       }
 
-      @include transition(all, 0.3s);
-
+      transition: background, 0.3s;
       color: #fff;
       text-transform: uppercase;
       background: $primary-dark;
@@ -131,6 +130,11 @@
       border-radius: 20px;
 
       &:hover {
+        text-decoration: none;
+        background: lighten($primary-dark, 10%);
+      }
+
+      &:focus {
         text-decoration: none;
         background: lighten($primary-dark, 10%);
       }

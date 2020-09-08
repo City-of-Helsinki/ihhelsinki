@@ -9,7 +9,7 @@
 }
 
 .about-services {
-  background: $kuvittaja-pink-light;
+  background: $kuvittaja-pink;
   margin: 0 0 160px 0;
   padding: 60px 0;
 
@@ -48,6 +48,12 @@
       padding: 0 15px;
       margin: 0 auto;
       text-align: center;
+      color: $font-green;
+
+      &::before {
+        content: "";
+        margin: 0;
+      }
     }
 
     img {

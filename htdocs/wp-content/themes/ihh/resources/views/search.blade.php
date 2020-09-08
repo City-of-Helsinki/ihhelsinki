@@ -2,6 +2,9 @@
 
 @section('content')
   <section class="content-block container">
+    <div class="content-header">
+      <h1>Search result</h1>
+    </div>
     @if (!have_posts())
       <div class="alert alert-warning">
         {{ pll__('Sorry, no results were found.') }}
