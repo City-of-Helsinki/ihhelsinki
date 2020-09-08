@@ -32,7 +32,7 @@
   padding-left: 0;
   padding-right: 0;
   padding-bottom: 50px;
-  background: #f0c3b8;
+  background: $color-light-red;
   width: 100%;
   max-width: 100%;
 
@@ -125,7 +125,6 @@
           display: flex;
           align-items: center;
           justify-content: center;
-          background: $primary;
           width: 40px;
           height: 40px;
           border-radius: 20px;
@@ -136,12 +135,14 @@
           }
 
           &:hover {
-            background: lighten($primary, 10%);
+            //background: lighten($primary, 10%);
+            background: $kuvittaja-pink;
             text-decoration: none;
           }
 
           &:focus {
-            background: lighten($primary, 10%);
+            //background: lighten($primary, 10%);
+            background: $kuvittaja-pink;
             text-decoration: none;
           }
         }
