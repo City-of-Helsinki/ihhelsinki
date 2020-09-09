@@ -6,7 +6,7 @@
   height: 64px;
   border-radius: 37px;
   margin: 16px;
-  color: $color-primary-white;
+  color: black;
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 30px;
   font-weight: 400;
@@ -24,7 +24,7 @@
   }
 
   &.default {
-    background-color: $color-primary-green;
+    background-color: $light-green;
   }
 
   &.action {
