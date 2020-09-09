@@ -34,7 +34,7 @@ a.external_link {
 
 button {
   &:focus, &:hover {
-    border: 3px solid black;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
   }
 }
 
@@ -55,7 +55,7 @@ li {
 }
 
 footer a {
-  color: white;
+  color: #015149;
   text-decoration: underline;
 }
 
