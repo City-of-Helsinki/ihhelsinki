@@ -54,7 +54,7 @@
   @include make-row(0);
 
   font-family: $font-source-sans;
-  color: #fff;
+  color: black;
 
   .footer-content-contact {
     @include media-breakpoint-down("sm") {
@@ -128,20 +128,19 @@
           width: 40px;
           height: 40px;
           border-radius: 20px;
+          color: black;
 
           i {
-            color: #fff;
+            color: black;
             font-size: 1.571rem;
           }
 
           &:hover {
-            //background: lighten($primary, 10%);
             background: $kuvittaja-pink;
             text-decoration: none;
           }
 
           &:focus {
-            //background: lighten($primary, 10%);
             background: $kuvittaja-pink;
             text-decoration: none;
           }
