@@ -138,6 +138,11 @@
         text-decoration: none;
         background: lighten($primary-dark, 10%);
       }
+
+      &::before {
+        content: "";
+        margin: 0;
+      }
     }
 
     &.share {
