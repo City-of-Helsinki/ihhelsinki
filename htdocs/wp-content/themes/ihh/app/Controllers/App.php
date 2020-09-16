@@ -3,7 +3,7 @@
 namespace App\Controllers;
 
 use Sober\Controller\Controller;
-use function IHH\get_cached_service_status;
+use IHH;
 
 class App extends Controller {
 
@@ -82,7 +82,7 @@ class App extends Controller {
     }
 
     public static function service_status(){
-        return get_cached_service_status('service_status');
+        return IHH\fetch_service_status();
     }
 
 }

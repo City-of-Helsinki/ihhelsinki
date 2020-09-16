@@ -12,13 +12,32 @@ License:     MIT
 namespace IHH;
 
 require_once( dirname( __FILE__ ) . '/hooks.php' );
-require_once( dirname( __FILE__ ) . '/helpers.php' );
 
-function fetch_service_status($url, $args) {
-  $externalData = wp_remote_get($url, $args);
+function fetch_service_status() {
+  #https://lt36853.loomis.fi:9090/managementinformation/v2/branches/1/queues/
+  $CACHE_KEY = 'service_status';
+  $CACHE_EXPIRATION = 120;
 
-  if(!request_ok($externalData)) {
+  $API_URL = 'https://lt36853.loomis.fi:9090';
+  $ENDPOINT = '/managementinformation/v2/branches/1/queues/';
+
+  if($data = get_transient($CACHE_KEY)){
+    return $data;
+  }
+
+  if(!$TOKEN = get_option('service_api_token')){
+    // service api's security token has not been set to options.
     return false;
   }
-  return $externalData['body'];
+
+  $args = [
+    'headers' => [
+      'auth-token' => $TOKEN
+    ]
+  ];
+
+  if($data = fetch_service_status($API_URL.$ENDPOINT, $args)){
+    set_transient($CACHE_KEY, json_encode($data), $CACHE_EXPIRATION);
+  }
+  return $data;
 }
