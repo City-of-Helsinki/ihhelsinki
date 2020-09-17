@@ -25,6 +25,10 @@ a {
     margin: 0 5px 0 3px;
   }
 
+  &[href^=tel]::after {
+    content: "";
+  }
+
   &.no-blank-icon::before {
     content: "";
     margin: 0;

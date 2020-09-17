@@ -11,6 +11,10 @@
       font-family: FontAwesome, sans-serif;
       content: " \f105";
     }
+
+    &[href^=tel]::after {
+      content: "";
+    }
   }
 
   .alert {
