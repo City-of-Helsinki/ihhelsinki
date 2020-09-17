@@ -87,3 +87,7 @@ body > nav {
     overflow-y: auto;
   }
 }
+
+h3 {
+  @extend h4;
+}
