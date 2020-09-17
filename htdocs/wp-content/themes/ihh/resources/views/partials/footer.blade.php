@@ -12,7 +12,7 @@
   <div class="container">
     <div class="footer-content">
       <div class="footer-content-some hide-on-mobile">
-        <img src="@asset('images/logo_white.svg')" alt="International House Helsinki" class="footer-logo">
+        <img src="@asset('images/ihh_logo_black.png')" alt="International House Helsinki" class="footer-logo">
 
         <ul class="some-icons">
           <li><a class="no-blank-icon" href="https://twitter.com/ihhelsinki/" target="_blank"><i aria-hidden="true" class="fa fa-twitter"></i><span class="ihh-visually-hidden">External content: Twitter page for Internal House Helsinki</span></a></li>
@@ -30,7 +30,7 @@
       </div>
 
       <div class="footer-content-some hide-on-desktop">
-        <img src="@asset('images/logo_white.svg')" alt="International House Helsinki" class="footer-logo">
+        <img src="@asset('images/ihh_logo_black.png')" alt="International House Helsinki" class="footer-logo">
 
         <ul class="some-icons">
           <li><a class="no-blank-icon" href="https://twitter.com/ihhelsinki/" target="_blank"><i aria-hidden="true" class="fa fa-twitter"></i><span class="ihh-visually-hidden">External content: Twitter page for Internal House Helsinki</span></a></li>
