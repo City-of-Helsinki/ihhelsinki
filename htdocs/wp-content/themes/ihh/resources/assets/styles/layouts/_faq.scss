@@ -20,6 +20,10 @@
     font-family: $font-open-sans;
     border-bottom: 1px solid #d8d8d8;
 
+    &:focus-within {
+      background: $kuvittaja-green-light;
+    }
+
     .question-header {
       @extend .btn;
       @extend .btn-link;
@@ -40,8 +44,11 @@
       }
 
       &:hover,
-      &:focus,
       &:active {
+        text-decoration: none;
+      }
+
+      &:focus {
         text-decoration: none;
       }
 
@@ -81,6 +88,27 @@
 
     &:first-child {
       border-top: 1px solid #d8d8d8;
+    }
+  }
+
+  a {
+    &::after {
+      font-family: FontAwesome, sans-serif;
+      content: " \f105";
+    }
+
+    &[target="_blank"]::before {
+      content: "\f08e";
+      font-family: FontAwesome, sans-serif;
+      margin: 0 5px 0 3px;
+    }
+
+    &[href^=tel]::after {
+      content: "";
+    }
+
+    &[href^=mailto]::after {
+      content: "";
     }
   }
 }

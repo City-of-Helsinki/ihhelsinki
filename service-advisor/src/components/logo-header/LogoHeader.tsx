@@ -5,7 +5,7 @@ import {attachServiceClassName} from '../../helpers/render-helper';
 
 const LogoHeader = () => (
   <div className={attachServiceClassName('App-logoContainer')}>
-    <img src={logo} className="App-logo" alt="logo" />
+    <img src={logo} className="App-logo" alt="International house helsinki" />
   </div>
 );
 

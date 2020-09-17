@@ -37,7 +37,6 @@ const Question = (props: IStateQuestionProps) => (
       <div className={attachServiceClassName("Question__descriptions")}>
         {getQuestionDescriptionElements(props.question)}
       </div>
-      <br/>
       <div className="Question_options">
           {getQuestionOptionElements(props)}
       </div>

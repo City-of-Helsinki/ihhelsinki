@@ -5,7 +5,8 @@ import { attachServiceClassName } from '../../helpers/render-helper';
 type TProps = {
   clickHandler?: Function;
   data: {
-    text: string
+    text: string,
+    altText?: string,
   };
   buttonType: 'action' | 'default'
 } & React.ButtonHTMLAttributes<HTMLButtonElement>
@@ -15,11 +16,18 @@ const AppButtonRounded = (props: TProps) => {
 
   return (
       <button
-        className={attachServiceClassName("AppButtonRounded "+ buttonType)}
+        className={attachServiceClassName("AppButtonRounded AppButtonRounded__inner "+ buttonType)}
         onClick={clickHandler ? () => clickHandler(data) : undefined}
         {...rest}
       >
-          <div className={attachServiceClassName("AppButtonRounded__inner")}>{data.text}</div>
+          <span className="button-content">
+            {data.text}
+          </span>
+          {data.altText &&
+            <span className="button-suplementary">
+              { data.altText }
+            </span>
+          }
       </button>
     );
 }

@@ -20,7 +20,7 @@ const Page404 = (props:RouteComponentProps<TComponentProps>) => {
       </div>
       <div className="Page404__controls">
         <a href="/">
-          <i className="fi-home">&nbsp;</i>
+          <i className="fi-home"/>
           {props.languageStore!.getTranslatedText('goHome')}
         </a>
       </div>

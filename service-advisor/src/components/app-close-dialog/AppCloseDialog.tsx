@@ -18,47 +18,57 @@ type TDialogProps = {
   languageStore?: ILanguageStore
 }
 
-const AppCloseDialog = (props: TDialogProps) => {
-  const {languageStore} = props;
+class AppCloseDialog extends React.Component<TDialogProps> {
+  private popUp = React.createRef<HTMLDivElement>();
 
-  const closeApp = async () => {
-    await navigate('/');
-  };
+  componentDidUpdate() {
+    if ( this.popUp.current !== null) {
+      this.popUp.current.focus();
+    }
+  }
 
-  const continueWithApp = () => {
-    props.modalStore!.closeModal();
-  };
+  render() {
+    const {languageStore} = this.props;
 
-  const getVisibility = () =>
-    props.modalStore!.showModal
-      ? "visible"
-      : "hidden";
+    const closeApp = async () => {
+      await navigate('/');
+    };
 
-  return (
-    <>
-      <div className={"AppDialogWrapperBackground "+getVisibility()} />
-      <div className={"AppDialogWrapper "+getVisibility()}>
-        <div className={attachServiceClassName("AppDialog")}>
-          <div className={attachServiceClassName("AppDialog__heading")}>
-            {languageStore!.getTranslatedText('closeApp')}
+    const continueWithApp = () => {
+      this.props.modalStore!.closeModal();
+    };
+
+    const getVisibility = () =>
+        this.props.modalStore!.showModal
+            ? "visible"
+            : "hidden";
+
+    return (
+        <>
+          <div className={"AppDialogWrapperBackground "+getVisibility()} />
+          <div className={"AppDialogWrapper "+getVisibility()}>
+            <div className={attachServiceClassName("AppDialog")} tabIndex={0} ref={this.popUp}>
+              <div className={attachServiceClassName("AppDialog__heading")}>
+                {languageStore!.getTranslatedText('closeApp')}
+              </div>
+              <p className={attachServiceClassName("AppDialog__info")}>
+                {languageStore!.getTranslatedText('closeAppWarn')}
+              </p>
+              <div className="AppDialog__controls">
+                <AppButtonRounded
+                    buttonType="default"
+                    data={{text: languageStore!.getTranslatedText('continue')}}
+                    clickHandler={continueWithApp} />
+                <AppButtonRounded
+                    buttonType="action"
+                    data={{text: languageStore!.getTranslatedText('close')}}
+                    clickHandler={closeApp} />
+              </div>
+            </div>
           </div>
-          <p className={attachServiceClassName("AppDialog__info")}>
-            {languageStore!.getTranslatedText('closeAppWarn')}
-          </p>
-          <div className="AppDialog__controls">
-            <AppButtonRounded
-              buttonType="default"
-              data={{text: languageStore!.getTranslatedText('continue')}}
-              clickHandler={continueWithApp} />
-            <AppButtonRounded
-              buttonType="action"
-              data={{text: languageStore!.getTranslatedText('close')}}
-              clickHandler={closeApp} />
-          </div>
-        </div>
-      </div>
-    </>
-  );
-};
+        </>
+    );
+  }
+}
 
 export default inject('questionStore','modalStore','answerStore', 'languageStore')(observer(AppCloseDialog));

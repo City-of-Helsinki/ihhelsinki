@@ -18,14 +18,14 @@
         <button class="question-header collapsed"
                 data-toggle="collapse"
                 data-target="#answer_{{$id}}"
-                aria-expanded="true"
-                aria-controls="answer_{{$id}}">
+                aria-expanded="false"
+                aria-controls="answer_{{$id}}"
+                aria-owns="answer_{{$id}}">
           <span>{{the_sub_field('question')}}</span>
         </button>
 
         <div id="answer_{{$id}}"
              class="collapse question-answer"
-             aria-labelledby="question_{{$id}}"
              data-parent="#faqs">
           {{the_sub_field('answer')}}
         </div>

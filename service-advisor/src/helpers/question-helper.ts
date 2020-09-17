@@ -60,7 +60,7 @@ const request = async <T>(
   } catch (err) {
     console.info(err);
   }
-} 
+}
 
 export const TIME_ELAPSED = 60000;
 
