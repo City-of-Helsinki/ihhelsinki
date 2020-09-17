@@ -31,19 +31,22 @@ class App extends React.Component<TComponentProps> {
 
     return (
       <div className="App">
-        <div className="App__page-wrapper">
+        <main className="App__page-wrapper">
           <AppRouter/>
-        </div>
+        </main>
 
         {/* popup card for legal disclaimer */}
         {staticStore!.showDisclaimer && (
-          <div className="App__disclaimer-popup">
+          <aside aria-live="polite" className="App__disclaimer-popup">
             <div className="App-overlay">
               <div className={attachServiceClassName("App__disclaimer-container")}>
                 <div className={attachServiceClassName("App__disclaimer-header")}>
                   <span>{languageStore!.getTranslatedText('disclaimer')}</span>
-                  <button onClick={staticStore!.toggleDisclaimer}>
-                    <i className="fi-x">&nbsp;</i>
+                  <button
+                      onClick={staticStore!.toggleDisclaimer}
+                      aria-label={languageStore!.getTranslatedText('close')}
+                  >
+                    <i className="fi-x"/>
                   </button>
                 </div>
                 <div className="App__disclaimer-divider" />
@@ -53,7 +56,7 @@ class App extends React.Component<TComponentProps> {
                 />
               </div>
             </div>
-          </div>
+          </aside>
         )}
 
         {process.env.REACT_APP_VERSION === 'public' && (

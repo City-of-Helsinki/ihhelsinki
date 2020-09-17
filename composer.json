@@ -80,7 +80,8 @@
     "wpackagist-plugin/imsanity": "~2.3",
     "wpackagist-plugin/polylang": "^2.6.1",
     "wpackagist-plugin/simple-page-ordering": "~2.2",
-    "wpackagist-plugin/wordpress-seo": "^14.2"
+    "wpackagist-plugin/wordpress-seo": "^14.2",
+    "wpackagist-plugin/email-address-encoder": "^1.0"
   },
   "extra": {
     "installer-paths": {

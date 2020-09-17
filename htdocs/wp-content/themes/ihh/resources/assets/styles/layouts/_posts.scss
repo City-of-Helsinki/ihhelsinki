@@ -21,8 +21,7 @@
       flex: 0 0 31%;
     }
 
-    @include transition(all, 0.3s);
-
+    transition: box-shadow, 0.3s;
     display: flex;
     flex-flow: column;
     font-family: $font-open-sans;
@@ -35,6 +34,18 @@
       height: auto;
     }
 
+    > a {
+      flex: 1;
+      display: flex;
+      flex-flow: column;
+      flex-wrap: wrap;
+      background: #91c8c2;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
     h2 {
       font-size: 16px;
       line-height: 19px;
@@ -43,13 +54,18 @@
       color: #231f00;
       margin: 0 0 10px 0;
       flex: 1;
-      hyphens: auto;
 
-      a {
+      a:not(:first-child) {
         color: #231f00;
 
         &:hover {
-          color: $primary-dark;
+          box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+          text-decoration: none;
+        }
+
+        &:focus,
+        &:focus-within {
+          box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
           text-decoration: none;
         }
       }
@@ -93,10 +109,10 @@
     .read-more {
       @extend .btn;
 
-      background: $primary-dark;
+      background: #fff;
       font-family: $font-open-sans;
       font-weight: 500;
-      color: #fff;
+      color: black;
       text-align: center;
       display: block;
       margin: 30px auto 0 auto;
@@ -105,12 +121,19 @@
       padding: 7px 40px;
 
       &:hover {
-        color: #fff;
-        background: darken($primary-dark, 10%);
+        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+      }
+
+      &:focus {
+        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
       }
     }
 
     &:hover {
+      box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    &:focus {
       box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
     }
   }

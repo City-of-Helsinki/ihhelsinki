@@ -67,8 +67,7 @@
           padding: 20px 10px;
         }
 
-        @include transition(all, 0.3s);
-
+        transition: background, 0.3s;
         position: relative;
         flex: 1;
         display: flex;
@@ -99,9 +98,16 @@
           width: 20px;
           height: 26px;
           background-size: contain;
+          position: absolute;
+          right: 10px;
         }
 
         &:hover {
+          text-decoration: none;
+          background: darken($primary, 10%);
+        }
+
+        &:focus {
           text-decoration: none;
           background: darken($primary, 10%);
         }

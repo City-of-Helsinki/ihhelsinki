@@ -20,7 +20,7 @@
           {{ the_content() }}
 
           @if(get_field('link'))
-            <a href="{{ the_field('link') }}" target="_blank" class="read-more">{!! pll__('Read More') !!}</a>
+            <a href="{{ the_field('link') }}" target="_blank" class="read-more">{!! pll__('Read more about the service') !!}  <span class="ihh-visually-hidden">from service provider's website</span></a>
           @endif
         </div>
       </div>

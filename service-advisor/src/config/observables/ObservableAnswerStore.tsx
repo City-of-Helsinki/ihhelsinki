@@ -70,7 +70,7 @@ class ObservableAnswerStore {
     const verticalMargin = 20;
     const pageWidth = 595;
     const contentWidth = pageWidth - 2 * horizontalMargin;
-    
+
     let content: any = []
     result.forEach(answerGroup => {
       const groupName = answerGroup.group.name;
@@ -134,8 +134,8 @@ class ObservableAnswerStore {
         },
         footer: {
           margin: [10, 10],
-          fillColor: '#02A090',
-          color: '#ffffff',
+          fillColor: '#91c8c2',
+          color: 'black',
         }
       },
       pageMargins: [horizontalMargin, verticalMargin]

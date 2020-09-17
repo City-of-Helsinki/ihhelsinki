@@ -5,7 +5,8 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: $color-primary-green;
+    background-color: $light-green;
+    color: black;
 
     @media only screen and (min-width: 600px) {
       flex-direction: row;
@@ -32,9 +33,14 @@
   &__contact {
     font-size: 14px;
     padding: 12px;
-    color: white;
+    color: black;
     text-overflow: ellipsis;
     line-height: 16px;
+
+    .external_link {
+      color: $font-green;
+      text-decoration: underline;
+    }
 
     @media only screen and (min-width: 600px) {
       width: 50%;

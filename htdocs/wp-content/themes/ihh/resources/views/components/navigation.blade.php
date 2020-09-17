@@ -2,7 +2,7 @@
   <div class="container">
     <a class="navbar-brand" href="{{ home_url('/') }}">
       <img src="@asset('images/logo_color.svg')" width="175" height="60" class="d-inline-block align-top"
-           alt="{{ get_bloginfo('name', 'display') }}">
+           alt="Frontpage">
     </a>
     <button class="navbar-toggler"
             type="button"
