@@ -29,6 +29,10 @@ a {
     content: "";
   }
 
+  &[href^=mailto]::after {
+    content: "";
+  }
+
   &.no-blank-icon::before {
     content: "";
     margin: 0;
