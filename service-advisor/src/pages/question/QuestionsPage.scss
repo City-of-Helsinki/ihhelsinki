@@ -23,4 +23,9 @@
   .Action_buttons__container {
     display: flex;
   }
+
+  &:focus {
+    border: 0;
+    outline: none;
+  }
 }

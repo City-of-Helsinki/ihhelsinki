@@ -68,7 +68,13 @@
       padding-inline-start: 40px;
       list-style: initial;
       line-height: 16px;
-    } 
+    }
+
+    a {
+      color: $font-green;
+      text-decoration: underline;
+    }
+
   }
 
   &__email {

@@ -59,13 +59,13 @@
         color: #231f00;
 
         &:hover {
-          color: $primary-dark;
+          box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
           text-decoration: none;
         }
 
         &:focus,
         &:focus-within {
-          color: $primary-dark;
+          box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
           text-decoration: none;
         }
       }
@@ -121,13 +121,11 @@
       padding: 7px 40px;
 
       &:hover {
-        color: #fff;
-        background: darken($primary-dark, 10%);
+        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
       }
 
       &:focus {
-        color: #fff;
-        background: darken($primary-dark, 10%);
+        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
       }
     }
 
