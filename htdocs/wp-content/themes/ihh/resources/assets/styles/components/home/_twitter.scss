@@ -51,7 +51,7 @@
   .tweet {
     background: #fff;
     padding: 0;
-    color: $kuvittaja-green;
+    color: $primary-dark;
 
     .tweet-content {
       font-family: $font-open-sans;
@@ -61,6 +61,7 @@
 
       > a {
         color: $primary-dark;
+        text-decoration: none;
       }
     }
 

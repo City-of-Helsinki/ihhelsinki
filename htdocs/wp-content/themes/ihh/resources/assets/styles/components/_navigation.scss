@@ -4,9 +4,13 @@
   font-family: $font-source-sans;
   background: #fff;
 
+  a {
+    text-decoration: none;
+  }
+
   .navbar-nav {
     .pll-parent-menu-item > button {
-      color: $primary;
+      color: $primary-dark;
       background-color: inherit;
       border: 0;
     }

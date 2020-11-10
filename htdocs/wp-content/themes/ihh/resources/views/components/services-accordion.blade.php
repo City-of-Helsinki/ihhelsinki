@@ -24,9 +24,12 @@
             <div class="services-list-body-text" @if(get_field('color')) style="background-color: {!! get_field('color') !!}" @endif>
               <h2>{{ the_title() }}</h2>
               {{ the_content() }}
+              @php
+                $parserUrl = parse_url(get_field('link'));
+              @endphp
 
               @if(get_field('link'))
-                <a href="{{ the_field('link') }}" target="_blank" class="read-more">{!! pll__('Read more about the service') !!} <span class="ihh-visually-hidden">from service provider's website</span></a>
+                <a href="{{ the_field('link') }}" target="_blank" class="read-more">{!! pll__('Read more from ') !!} @php echo $parserUrl['host']; @endphp</a>
               @endif
             </div>
           </div>

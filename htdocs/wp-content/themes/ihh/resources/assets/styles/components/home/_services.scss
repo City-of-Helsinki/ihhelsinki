@@ -80,6 +80,7 @@
         line-height: 1;
         padding: 20px;
         text-align: left;
+        text-decoration: none;
 
         &::after {
           @include media-breakpoint-down("sm") {
