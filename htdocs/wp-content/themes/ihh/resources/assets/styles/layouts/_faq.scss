@@ -89,6 +89,12 @@
     &:first-child {
       border-top: 1px solid #d8d8d8;
     }
+
+    img {
+      display: block;
+      max-width: 200px;
+      margin: 20px auto 20px auto;
+    }
   }
 
   a {

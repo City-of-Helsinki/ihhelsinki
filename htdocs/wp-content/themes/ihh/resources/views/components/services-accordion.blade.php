@@ -5,7 +5,14 @@
 @endphp
 
 <section class="services-list" id="faqs">
-    @while($services->have_posts()) @php $services->the_post() @endphp
+    @while($services->have_posts()) @php $services->the_post();
+      $logoUrl = '';
+      $logoAlt = '';
+      if($logoArray = get_field('logo', get_the_ID())){
+        $logoUrl = $logoArray['url'];
+        $logoAlt = $logoArray['alt'];
+      }
+    @endphp
     <div class="question" id="service_{{the_ID()}}">
       <button class="question-header collapsed"
               data-toggle="collapse"
@@ -22,6 +29,7 @@
         <div class="services-list-content" @if($background_img) style="background-image: url({{$background_img}})" @endif>
           <div class="services-list-body">
             <div class="services-list-body-text" @if(get_field('color')) style="background-color: {!! get_field('color') !!}" @endif>
+              @if($logoUrl) <img src="{{ $logoUrl }}" alt="{{ $logoAlt }}"> @endif
               <h2>{{ the_title() }}</h2>
               {{ the_content() }}
               @php
