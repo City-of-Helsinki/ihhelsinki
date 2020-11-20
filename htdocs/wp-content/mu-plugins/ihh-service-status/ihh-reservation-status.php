@@ -19,7 +19,7 @@ function fetch_service_status() {
   $CACHE_EXPIRATION = 120;
 
   $API_URL = 'https://lt36853.loomis.fi:9090';
-  $ENDPOINT = '/managementinformation/v2/branches/1/queues/';
+  $ENDPOINT = '/MobileTicket/branches/1/services/wait-info/';
 
   if($data = get_transient($CACHE_KEY)){
     return $data;
@@ -30,14 +30,28 @@ function fetch_service_status() {
     return false;
   }
 
+  $token = 'no-tokens-in-git';
   $args = [
     'headers' => [
-      'auth-token' => $TOKEN
+      'auth-token' => $token
     ]
   ];
 
-  if($data = fetch_service_status($API_URL.$ENDPOINT, $args)){
-    set_transient($CACHE_KEY, json_encode($data), $CACHE_EXPIRATION);
+  $data = wp_remote_get('https://lt36853.loomis.fi:9090/MobileTicket/branches/1/services/wait-info/', $args);
+
+  if(!request_ok($data)) {
+    #var_dump($data);die();
+    return false;
   }
+  #var_dump($data['body']);die();
+
+  set_transient($CACHE_KEY, json_encode($data), $CACHE_EXPIRATION);
+
+  #die('no');
   return $data;
 }
+
+function request_ok($request){
+  return !is_wp_error($request) && isset($request['code']) && $request['code'] == 200;
+}
+
