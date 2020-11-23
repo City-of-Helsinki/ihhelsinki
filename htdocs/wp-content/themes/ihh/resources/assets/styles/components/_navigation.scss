@@ -11,7 +11,7 @@
 
   .navbar-nav {
     .pll-parent-menu-item > button {
-      color: $primary-dark;
+      color: $font-green;
       background-color: inherit;
       border: 0;
     }
@@ -92,7 +92,7 @@
 
       &.active > a {
         border-bottom-color: transparent;
-        color: $primary;
+        color: $font-green;
       }
     }
   }
