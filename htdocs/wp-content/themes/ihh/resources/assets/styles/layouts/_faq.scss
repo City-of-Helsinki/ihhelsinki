@@ -73,7 +73,7 @@
       padding: 20px 20px 20px;
       font-size: 14px;
       //color: #6d6d6d;
-      background: $kuvittaja-pink;
+      background: $kuvittaja-pink-light;
     }
 
     &:nth-child(even) {
@@ -88,6 +88,27 @@
 
     &:first-child {
       border-top: 1px solid #d8d8d8;
+    }
+  }
+
+  a {
+    &::after {
+      font-family: FontAwesome, sans-serif;
+      content: " \f105";
+    }
+
+    &[target="_blank"]::before {
+      content: "\f08e";
+      font-family: FontAwesome, sans-serif;
+      margin: 0 5px 0 3px;
+    }
+
+    &[href^=tel]::after {
+      content: "";
+    }
+
+    &[href^=mailto]::after {
+      content: "";
     }
   }
 }

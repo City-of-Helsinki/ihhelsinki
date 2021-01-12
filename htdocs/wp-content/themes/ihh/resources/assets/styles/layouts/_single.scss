@@ -158,6 +158,11 @@
         border-radius: 50%;
         font-size: 20px;
         padding: 0;
+
+        &::before {
+          content: "";
+          margin-left: 0;
+        }
       }
     }
   }

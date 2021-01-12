@@ -22,7 +22,7 @@
         <div class="services-list-content" @if($background_img) style="background-image: url({{$background_img}})" @endif>
           <div class="services-list-body">
             <div class="services-list-body-text" @if(get_field('color')) style="background-color: {!! get_field('color') !!}" @endif>
-              <h2>{{ the_title() }}</h2>
+              <h2 lang="fi">{{ the_title() }}</h2>
               {{ the_content() }}
               @php
                 $service_provider = get_field('service_provider_logo');
@@ -35,7 +35,7 @@
               @endif
 
               @if(get_field('link'))
-                <a href="{{ the_field('link') }}" target="_blank" class="read-more">{!! pll__('Read More about this service') !!}</a>
+                <a href="{{ the_field('link') }}" target="_blank" class="read-more">{!! pll__('Read more about the service') !!} <span class="ihh-visually-hidden">this link leads to external webpage</span></a>
               @endif
             </div>
           </div>

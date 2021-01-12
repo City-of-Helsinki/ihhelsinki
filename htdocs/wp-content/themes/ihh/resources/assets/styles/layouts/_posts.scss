@@ -59,13 +59,13 @@
         color: #231f00;
 
         &:hover {
-          color: $primary-dark;
+          box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
           text-decoration: none;
         }
 
         &:focus,
         &:focus-within {
-          color: $primary-dark;
+          box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
           text-decoration: none;
         }
       }
@@ -109,10 +109,10 @@
     .read-more {
       @extend .btn;
 
-      background: $primary-dark;
+      background: #fff;
       font-family: $font-open-sans;
       font-weight: 500;
-      color: #fff;
+      color: black;
       text-align: center;
       display: block;
       margin: 30px auto 0 auto;
@@ -121,13 +121,11 @@
       padding: 7px 40px;
 
       &:hover {
-        color: #fff;
-        background: darken($primary-dark, 10%);
+        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
       }
 
       &:focus {
-        color: #fff;
-        background: darken($primary-dark, 10%);
+        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
       }
     }
 

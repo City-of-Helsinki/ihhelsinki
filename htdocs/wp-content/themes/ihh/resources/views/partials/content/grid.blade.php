@@ -10,7 +10,7 @@
     <div class="post-content">
       <h2>{!! get_the_title() !!}</h2>
       @php
-        $readmore = get_post_type() == 'event' ? 'Read about the event' : 'Read the article';
+        $readmore = get_post_type() == 'event' ? 'View event' : 'Read news content';
       @endphp
       @if('event' === get_post_type())
         <div class="post-content-event-meta">

@@ -83,8 +83,10 @@ function request_ok($request) {
 
 // Cache fetched data.
 function handle_cache($response, $time){
+  $body = $response['http_response'];
+  $json = $body->get_data();
   set_transient(IHH_SERVICE_CACHE_TIMESTAMP_KEY, $time);
-  set_transient(IHH_SERVICE_CACHE_KEY, $response, IHH_SERVICE_CACHE_EXPIRATION);
+  set_transient(IHH_SERVICE_CACHE_KEY, $json, IHH_SERVICE_CACHE_EXPIRATION);
 }
 
 // Return response
