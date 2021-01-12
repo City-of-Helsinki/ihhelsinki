@@ -29,23 +29,18 @@
         <div class="services-list-content" @if($background_img) style="background-image: url({{$background_img}})" @endif>
           <div class="services-list-body">
             <div class="services-list-body-text" @if(get_field('color')) style="background-color: {!! get_field('color') !!}" @endif>
-<<<<<<< HEAD
-              <h2 lang="fi">{{ the_title() }}</h2>
-=======
-              @if($logoUrl) <img src="{{ $logoUrl }}" alt="{{ $logoAlt }}"> @endif
+
               <h2>{{ the_title() }}</h2>
->>>>>>> IHH-86_service_provider_logo
               {{ the_content() }}
               @php
                 $service_provider = get_field('service_provider_logo');
               @endphp
-              @if($service_provider)
+              @if($logoArray)
                 <div>
                   <h3>Service provided by:</h3>
-                  <img src="@php echo $service_provider['url'] @endphp" alt="@php echo $service_provider['alt'] @endphp">
+                  <img style="width:25%;" src="@php echo $logoUrl @endphp" alt="@php echo $logoAlt @endphp">
                 </div>
               @endif
-
               @if(get_field('link'))
                 @php
                   $parserUrl = parse_url(get_field('link'));
