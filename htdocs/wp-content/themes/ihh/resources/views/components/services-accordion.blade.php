@@ -35,7 +35,10 @@
               @endif
 
               @if(get_field('link'))
-                <a href="{{ the_field('link') }}" target="_blank" class="read-more">{!! pll__('Read more about the service') !!} <span class="ihh-visually-hidden">this link leads to external webpage</span></a>
+                @php
+                  $parserUrl = parse_url(get_field('link'));
+                @endphp
+                <a href="{{ the_field('link') }}" target="_blank" class="read-more">{!! pll__('Read more from ') !!} @php echo $parserUrl['host']; @endphp <span class="ihh-visually-hidden">this link leads to external webpage</span></a>
               @endif
             </div>
           </div>

@@ -4,9 +4,14 @@
   font-family: $font-source-sans;
   background: #fff;
 
+  a {
+    text-decoration: none;
+    color: #000 !important;
+  }
+
   .navbar-nav {
     .pll-parent-menu-item > button {
-      color: $primary;
+      color: $font-green !important;
       background-color: inherit;
       border: 0;
     }
@@ -87,7 +92,7 @@
 
       &.active > a {
         border-bottom-color: transparent;
-        color: $primary;
+        color: $font-green;
       }
     }
   }

@@ -92,23 +92,16 @@
   }
 
   a {
-    &::after {
-      font-family: FontAwesome, sans-serif;
-      content: " \f105";
-    }
-
-    &[target="_blank"]::before {
-      content: "\f08e";
-      font-family: FontAwesome, sans-serif;
-      margin: 0 5px 0 3px;
-    }
+    color: $font-green;
 
     &[href^=tel]::after {
       content: "";
+      text-decoration: none;
     }
 
     &[href^=mailto]::after {
       content: "";
+      text-decoration: none;
     }
   }
 }

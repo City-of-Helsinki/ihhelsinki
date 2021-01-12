@@ -41,4 +41,16 @@
 
     </div>
   </div>
+  @php
+    $misc = get_field('miscellaneous', 2);
+    $token = $misc['feedbackly_oid'] ?? false;
+  @endphp
+  @if($token)
+    <script>
+      (function(){
+        var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.defer = true; s.src = 'https://survey.feedbackly.com/dist/plugin-v4.min.js'; var e = document.getElementsByTagName('body')[0] || document.getElementsByTagName('head')[0]; e.appendChild(s); window._fblyConf={oid: '@php echo $token @endphp',pth: 'https://survey.feedbackly.com',dmn:'default'}; window.FBLY = window.FBLY || {evbuf: []}; window.FBLY.action = window.FBLY.action || function(a,b,c){window.FBLY.evbuf.push([a,b,c])}; ['addProperty', 'clearProperty', 'setLanguage', 'open', 'addMeta'].forEach(function(m){ window.FBLY[m] = window.FBLY[m] || function(a, c){window.FBLY.evbuf.push([m,a,c])} });
+      })();
+    </script>
+  @endif
+
 </footer>
