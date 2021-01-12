@@ -1,0 +1,65 @@
+.service-status-section {
+  h2 {
+    margin: 45px 0;
+    font-size: 55px;
+    font-weight: 700;
+  }
+
+  h3 {
+    font-weight: 700;
+  }
+
+  ul.service-status-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 0;
+    padding-left: 0;
+    margin-bottom: 20px;
+
+    li {
+      background: $kuvittaja-yellow;
+      padding: 10px 20px;
+      flex: 0 0 48%;
+      background-color: #f0e856;
+      margin-bottom: 20px;
+      max-width: 50%;
+
+      &:nth-child(odd) {
+        margin-right: 20px;
+      }
+
+      div {
+        margin-top: 10px;
+      }
+
+      .service-status-data {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 25px;
+
+        div {
+          flex: 0 0 50%;
+        }
+      }
+    }
+  }
+
+  .service-status-misc {
+    color: #7e7647;
+  }
+
+  .label {
+    font-size: 1.25rem;
+  }
+
+  span {
+    &.big {
+      font-size: 2rem;
+    }
+
+    &.medium {
+      font-size: 1.5rem;
+    }
+  }
+}

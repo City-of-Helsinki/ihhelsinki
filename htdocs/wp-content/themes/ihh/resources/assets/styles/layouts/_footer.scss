@@ -32,7 +32,7 @@
   padding-left: 0;
   padding-right: 0;
   padding-bottom: 50px;
-  background: $kuvittaja-darker-green;
+  background: $color-light-red;
   width: 100%;
   max-width: 100%;
 
@@ -54,7 +54,7 @@
   @include make-row(0);
 
   font-family: $font-source-sans;
-  color: #fff;
+  color: black;
 
   .footer-content-contact {
     @include media-breakpoint-down("sm") {
@@ -125,13 +125,12 @@
           display: flex;
           align-items: center;
           justify-content: center;
-          background: $primary;
           width: 40px;
           height: 40px;
           border-radius: 20px;
 
           i {
-            color: #fff;
+            color: black;
             font-size: 1.571rem;
           }
 
@@ -151,6 +150,7 @@
 
   .footer-content-info {
     font-size: 1rem;
+    color: black;
 
     @include media-breakpoint-down("sm") {
       @include make-col(12);
