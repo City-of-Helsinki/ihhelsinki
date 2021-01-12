@@ -58,9 +58,10 @@
             "mime_types": ""
         },
         {
-            "key": "field_5f572bdaf1261",
+
+            "key": "field_5facd8b14994c",
             "label": "Service provider logo",
-            "name": "service_provider_logo",
+            "name": "logo",
             "type": "image",
             "instructions": "",
             "required": 0,
@@ -99,5 +100,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1599548390
+    "modified": 1605163761
 }
