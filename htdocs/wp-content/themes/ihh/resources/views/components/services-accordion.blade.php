@@ -36,16 +36,25 @@
                 $service_provider = get_field('service_provider_logo');
               @endphp
               @if($logoArray)
-                <div>
-                  <h3>Service provided by:</h3>
-                  <img style="width:25%;" src="@php echo $logoUrl @endphp" alt="@php echo $logoAlt @endphp">
+                <div class="provider">
+                  <h3>Service provided by</h3>
+                  <div class="service-link">
+                    <img src="@php echo $logoUrl @endphp" alt="@php echo $logoAlt @endphp">
+                  </div>
+                  @if(get_field('link'))
+                    @php
+                      $parserUrl = parse_url(get_field('link'));
+                    @endphp
+                    <a href="{{ the_field('link') }}" target="_blank" class="read-more">{!! pll__('Read more from ') !!} @php echo $parserUrl['host']; @endphp <span class="ihh-visually-hidden">this link leads to external webpage</span></a>
+                  @endif
                 </div>
-              @endif
-              @if(get_field('link'))
-                @php
-                  $parserUrl = parse_url(get_field('link'));
-                @endphp
-                <a href="{{ the_field('link') }}" target="_blank" class="read-more">{!! pll__('Read more from ') !!} @php echo $parserUrl['host']; @endphp <span class="ihh-visually-hidden">this link leads to external webpage</span></a>
+              @else
+                @if(get_field('link'))
+                  @php
+                    $parserUrl = parse_url(get_field('link'));
+                  @endphp
+                  <a href="{{ the_field('link') }}" target="_blank" class="read-more">{!! pll__('Read more from ') !!} @php echo $parserUrl['host']; @endphp <span class="ihh-visually-hidden">this link leads to external webpage</span></a>
+                @endif
               @endif
             </div>
           </div>

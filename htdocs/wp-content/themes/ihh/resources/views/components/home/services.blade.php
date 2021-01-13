@@ -24,11 +24,12 @@
               $logoAlt = $logoArray['alt'];
             }
             @endphp
-          <li class="services-list-item">
+          <li class="servicelist-item">
             <a href="{{ the_permalink() }}#{{ sanitize_title(get_the_title()) }}"
-            @if(get_sub_field('color')) style="background-color: {{get_sub_field('color')}}" @endif>
-              @if($logoUrl) <img src="{{ $logoUrl }}" alt="{{ $logoAlt }}"/> @endif
-              <span>{{ the_title() }}</span>
+               @if(get_sub_field('color')) style="background-color: {{get_sub_field('color')}}" @endif>
+              <div><p>{{ the_title() }}</p></div>
+              @if($logoUrl) <div class="image-wrap"><img style="max-width:25%; display:block; margin: 0 auto;" src="{{ $logoUrl }}" alt="{{ $logoAlt }}"/></div> @endif
+              <span class="read-more">{!! pll__('Read more') !!}</span>
             </a>
           </li>
           @endwhile @php wp_reset_postdata() @endphp

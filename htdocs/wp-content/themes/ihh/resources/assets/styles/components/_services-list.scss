@@ -102,5 +102,57 @@
       font-size: 16px;
       line-height: 20px;
     }
+
+    .service-link {
+      @include media-breakpoint-down("lg") {
+        height: 180px;
+        width: 180px;
+      }
+
+      @include media-breakpoint-down("md") {
+        width: 180px;
+        height: 180px;
+      }
+
+      @include media-breakpoint-down("sm") {
+        flex: 0 0 150px;
+        max-width: 150px;
+        height: 150px;
+        margin: 10px;
+      }
+
+      width: 220px;
+      height: 220px;
+      display: flex;
+      align-items: center;
+      background: #fff;
+      border-radius: 50%;
+      margin: 5px auto;
+
+      a {
+        display: block;
+        padding: 0 15px;
+        margin: 0 auto;
+        text-align: center;
+        color: $font-green;
+
+        &::before {
+          content: "";
+          margin: 0;
+        }
+      }
+
+      img {
+        @include media-breakpoint-down("sm") {
+          max-width: 90%;
+        }
+
+        max-width: 75%;
+      }
+    }
+
+    .provider {
+      text-align: center;
+    }
   }
 }

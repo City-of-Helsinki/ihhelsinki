@@ -33,6 +33,10 @@
     padding: 0;
     justify-content: space-between;
 
+    .image-wrap {
+      background-color: #fff;
+    }
+
     img {
       object-fit: contain;
       min-width: 150px;
@@ -53,7 +57,6 @@
       margin-bottom: 20px;
       display: flex;
       align-items: stretch;
-      height: 100px;
 
       &:nth-child(odd) {
         @include media-breakpoint-up("md") {
@@ -70,49 +73,29 @@
       }
 
       > a {
-        @include media-breakpoint-down("md") {
-          font-size: 18px;
-          padding: 20px 10px;
-        }
-
-        transition: background, 0.3s;
-        position: relative;
-        flex: 1;
         display: flex;
+        flex: 1;
+        text-align: center;
         align-items: center;
+        transition: background, 0.3s;
+        flex-direction: column;
         color: #000 !important;
         background: $primary;
         font-weight: bold;
         font-size: 24px;
         line-height: 1;
-        padding: 0 35px 0 10px;
+        padding: 20px;
         margin-bottom: 0;
-        text-align: left;
         text-decoration: none;
+        min-height: 100px;
+
+        @include media-breakpoint-down("md") {
+          font-size: 18px;
+          padding: 20px 10px;
+        }
 
         span {
           margin-left: 5px;
-        }
-
-        &::after {
-          @include media-breakpoint-down("sm") {
-            background: none;
-            font-family: FontAwesome, sans-serif;
-            content: "\f105";
-            width: auto;
-            height: auto;
-            color: #fff;
-            margin-right: 10px;
-          }
-
-          content: "";
-          background: url("../images/icons/angle-right.svg") no-repeat;
-          display: block;
-          width: 20px;
-          height: 26px;
-          background-size: contain;
-          position: absolute;
-          right: 10px;
         }
 
         &:hover {
@@ -125,6 +108,36 @@
           background: darken($primary, 10%);
         }
       }
+    }
+  }
+
+  .read-more {
+    @include media-breakpoint-down("sm") {
+      margin-top: 25px;
+      font-size: 15px;
+    }
+
+    @extend .btn;
+
+    transition: box-shadow, 0.3s;
+    margin-top: 20px;
+    background: #fff;
+    color: #000;
+    font-family: $font-source-sans;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 10px 40px;
+    border-radius: 30px;
+    line-height: 1;
+    text-decoration: none;
+
+    &:hover {
+      box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    &:focus {
+      box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
     }
   }
 }
