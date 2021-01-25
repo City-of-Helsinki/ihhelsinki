@@ -59,6 +59,23 @@
         @endforeach
       @endif
     </ul>
+      @if(have_rows('service_status_notice_box'))
+        @while(have_rows('service_status_notice_box')) @php the_row() @endphp
+        <div class="service-status-section__notice">
+          <div class="icon">
+            <span class="ihh-visually-hidden">Important notice</span>
+          </div>
+          <div class="text">
+            {{ the_sub_field('text')}}
+          </div>
+          <div class="button">
+            <a href="{{ the_sub_field('button_link')}}" @if(get_sub_field('open_in_new_tab')) target="_blank" @endif>
+              {{ the_sub_field('button_text')}}
+            </a>
+          </div>
+        </div>
+        @endwhile
+      @endif
     @endif
   </div>
 </section>
