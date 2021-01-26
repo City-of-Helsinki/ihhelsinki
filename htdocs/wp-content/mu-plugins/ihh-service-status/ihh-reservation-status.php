@@ -68,12 +68,13 @@ function fetch_service_status() {
 
 // Return either cached data or fetch from api.
 function fetch_remote_data($url, $token, $cache_key = false) {
+  /*
   if ($cache_key && $data = get_transient(IHH_SERVICE_CACHE_KEY)) {
     $json = json_decode($data);
     $json['timestamp'] = get_transient(IHH_SERVICE_CACHE_TIMESTAMP_KEY);
     return $json;
   }
-
+  */
   $args = [
     'headers' => [
       'auth-token' => $token
