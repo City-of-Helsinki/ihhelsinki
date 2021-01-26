@@ -118,7 +118,7 @@ function handle_translations($services, $translations){
     $name = explode(' ', $service->serviceName) ? explode(' ', $service->serviceName)[0] : $service->serviceName;
     $service_translations = array_filter($translations,
     function($translation) use ($name) {
-      return ((strpos($translation->internalName, $name) !== false) && (strpos($translation->internalName, '-EN') !== false));
+      return (isset($translation->internalName) && ((strpos($translation->internalName, $name) !== false) && (strpos($translation->internalName, '-EN') !== false)));
     });
 
     if(!empty($service_translations)){
