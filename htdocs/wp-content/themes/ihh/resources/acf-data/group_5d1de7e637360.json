@@ -350,6 +350,216 @@
             ]
         },
         {
+            "key": "field_6020fb20d7e57",
+            "label": "Service status",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_6020fb98d7e58",
+            "label": "",
+            "name": "service_status",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_6020fc21d7e5a",
+                    "label": "Service status title",
+                    "name": "service_status_title",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "Service queue status",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_6020fbddd7e59",
+                    "label": "Queue length title",
+                    "name": "queue_length_title",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "People in queue",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_6020fc36d7e5b",
+                    "label": "Queue time title",
+                    "name": "queue_time_title",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "Estimated waiting time",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_6020fcaed7e5c",
+                    "label": "Color scheme",
+                    "name": "color_scheme",
+                    "type": "select",
+                    "instructions": "You can choose either single colored color scheme or two colored color scheme",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "single_colored": "Single colored",
+                        "multicolor": "Two colored scheme"
+                    },
+                    "default_value": "single_colored",
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "return_format": "value",
+                    "ajax": 0,
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_6020fd54d7e5d",
+                    "label": "Primary color",
+                    "name": "primary_color",
+                    "type": "color_picker",
+                    "instructions": "This is the primary color which is used by single colored scheme. If multicolored scheme is used, this color is used as a backround for every odd(1,3,5...) element.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "#f0e856"
+                },
+                {
+                    "key": "field_60210b57dda56",
+                    "label": "primary text color",
+                    "name": "primary_text_color",
+                    "type": "color_picker",
+                    "instructions": "Choose an accessible text color that goes with the primary color.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "#000"
+                },
+                {
+                    "key": "field_6020fdeed7e5e",
+                    "label": "Second color",
+                    "name": "second_color",
+                    "type": "color_picker",
+                    "instructions": "This color is used as a background of every even(2,4,6) element in the layout.",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_6020fcaed7e5c",
+                                "operator": "==",
+                                "value": "multicolor"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "#f0e856"
+                },
+                {
+                    "key": "field_60210bccdda57",
+                    "label": "Secondary text color",
+                    "name": "secondary_text_color",
+                    "type": "color_picker",
+                    "instructions": "Choose an accessible text color that goes with the secondary color.",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_6020fcaed7e5c",
+                                "operator": "==",
+                                "value": "multicolor"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "#000"
+                },
+                {
+                    "key": "field_6021000c7371e",
+                    "label": "Hide service status element from frontpage",
+                    "name": "hide_service_status_element",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 0,
+                    "ui": 0,
+                    "ui_on_text": "",
+                    "ui_off_text": ""
+                }
+            ]
+        },
+        {
             "key": "field_600ee4aae2840",
             "label": "Service status notice box",
             "name": "",
@@ -452,6 +662,51 @@
                     "ui": 0,
                     "ui_on_text": "",
                     "ui_off_text": ""
+                },
+                {
+                    "key": "field_6020f3a0d7754",
+                    "label": "Background color",
+                    "name": "background_color",
+                    "type": "color_picker",
+                    "instructions": "Background-color for the whole element",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "#f0c3b8"
+                },
+                {
+                    "key": "field_60210f5567432",
+                    "label": "Button backround color",
+                    "name": "button_backround_color",
+                    "type": "color_picker",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": ""
+                },
+                {
+                    "key": "field_60210ded429f0",
+                    "label": "Button text color",
+                    "name": "text_color",
+                    "type": "color_picker",
+                    "instructions": "Select accessible text color that goes with the button backround-color.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": ""
                 }
             ]
         },
@@ -693,5 +948,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1611589282
+    "modified": 1612779626
 }
