@@ -12,6 +12,7 @@
   span {
     &.big {
       font-size: 2rem;
+      font-weight: 700;
     }
 
     &.medium {
@@ -20,7 +21,7 @@
   }
 
   .service-status-section__notice {
-    background-color: $kuvittaja-pink-light;
+    // background-color: $kuvittaja-pink-light;
     display: flex;
     padding: 20px 20px;
     margin-bottom: 30px;
@@ -33,6 +34,7 @@
         padding: 10px 10px;
       }
 
+      display: block;
       background-color: transparent;
       padding: 20px 35px;
       border: 2px solid black;
