@@ -15,6 +15,12 @@ export default {
         $('#ihh-site-notification').focus();
       }
     });
+
+    $(document).ready(function(){
+      $('a[target=_blank]').each(function(){
+        $(this).append(' <span class="ihh-visually-hidden">opens in new tab</span>')
+      });
+    })
   },
   finalize() {
   },

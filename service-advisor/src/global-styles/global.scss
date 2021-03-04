@@ -23,10 +23,8 @@ body {
 }
 
 a.external_link {
-  text-decoration: none;
-
-  &:after {
-    padding-left: 6px;
+  &:before {
+    padding-right: 6px;
     content: "\f08e";
     font-family: "FontAwesome";
   }
