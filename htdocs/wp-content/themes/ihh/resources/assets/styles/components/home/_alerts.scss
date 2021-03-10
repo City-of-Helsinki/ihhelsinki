@@ -1,26 +1,4 @@
 .alert-area {
-  a {
-    color: $font-green !important;
-    text-decoration: none;
-
-    &:hover {
-      text-decoration: underline;
-    }
-
-    &::after {
-      font-family: FontAwesome, sans-serif;
-      content: " \f105";
-    }
-
-    &[href^=tel]::after {
-      content: "";
-    }
-
-    &[href^=mailto]::after {
-      content: "";
-    }
-  }
-
   .alert {
     @include media-breakpoint-down("sm") {
       padding-top: 10px;

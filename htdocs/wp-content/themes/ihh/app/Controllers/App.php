@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use Sober\Controller\Controller;
+use IHH;
 
 class App extends Controller {
 
@@ -79,4 +80,9 @@ class App extends Controller {
 
         return get_the_title();
     }
+
+    public static function service_status(){
+        return IHH\fetch_service_status();
+    }
+
 }

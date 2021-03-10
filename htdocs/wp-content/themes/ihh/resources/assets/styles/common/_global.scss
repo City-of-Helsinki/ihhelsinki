@@ -19,18 +19,22 @@ body {
 }
 
 a {
+  color: $font-green !important;
+  text-decoration: underline;
+
   &[target="_blank"]::before {
     content: "\f08e";
     font-family: FontAwesome, sans-serif;
     margin: 0 5px 0 3px;
   }
 
-  &[href^=tel]::after {
-    content: "";
-  }
+  &[href^=tel],
+  &[href^=mailto] {
+    text-decoration: none;
 
-  &[href^=mailto]::after {
-    content: "";
+    &::after {
+      content: "";
+    }
   }
 
   &.no-blank-icon::before {
@@ -49,18 +53,17 @@ a {
   }
 
   &.skip-main:focus,
-  &.skip-main:active {
-    color: #fff;
-    background-color: #000;
-    left: auto;
-    top: auto;
+  &.skip-main :active {
+    left: 0;
+    top: 0;
+    position: relative;
+    display: block;
+    color: $primary-dark;
     width: 30%;
     height: auto;
     overflow: auto;
-    margin: 10px 35%;
     padding: 5px;
     border-radius: 15px;
-    border: 4px solid yellow;
     text-align: center;
     font-size: 1.2em;
     z-index: 999;
@@ -69,11 +72,6 @@ a {
 
 main p a {
   color: $font-green;
-
-  &::after {
-    font-family: FontAwesome, sans-serif;
-    content: " \f105";
-  }
 }
 
 a:hover {
@@ -101,5 +99,27 @@ body > nav {
 }
 
 h3 {
-  @extend h4;
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+h5 {
+  font-size: 1.15rem;
+}
+
+h6 {
+  font-size: 1.05rem;
+}
+
+.page {
+  a {
+    color: $font-green;
+  }
+}
+
+#wpadminbar a {
+  color: #fff !important;
 }
