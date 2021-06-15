@@ -19,6 +19,7 @@
       font-size: 40px;
     }
 
+    font-family: $font-roboto;
     position: relative;
     margin: -60px 0 40px 0;
     margin-top: 0;
@@ -27,12 +28,22 @@
   }
 
   .content-block-content {
-    p {
+    p,
+    address,
+    dl,
+    ol,
+    ul {
       @include media-breakpoint-down("sm") {
         font-size: 16px;
       }
 
       font-size: 18px;
+    }
+
+    dl,
+    ol,
+    ul {
+      line-height: 1.5;
     }
   }
 }

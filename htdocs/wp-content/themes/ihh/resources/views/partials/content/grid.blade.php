@@ -15,10 +15,10 @@
       @if('event' === get_post_type())
         <div class="post-content-event-meta">
           @if($date = get_field('start_time'))
-            <p class="date"><img src="@asset('images/icons/time.png')" alt=""> {{\App\format_event_date()}}</p>
+            <p class="date"> {{\App\format_event_date()}}</p>
           @endif
           @if($location = get_field('location'))
-            <p class="location"><img src="@asset('images/icons/location.png')" alt=""> {{$location}}</p>
+            <p class="location"> {{$location}}</p>
           @endif
         </div>
       @endif

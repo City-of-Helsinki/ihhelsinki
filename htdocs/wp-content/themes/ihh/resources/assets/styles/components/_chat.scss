@@ -6,7 +6,8 @@ $user-message-color: #5ac8bd !default;
     background: #f3f3f3 !important;
 
     div {
-      font-family: $font-roboto !important;
+      //font-family: $font-roboto !important;
+      font-family: $font-source-sans !important;
       font-size: 13px;
     }
 
@@ -84,7 +85,8 @@ $user-message-color: #5ac8bd !default;
     }
 
     .gwc-chat-body {
-      font-family: $font-roboto !important;
+      //font-family: $font-roboto !important;
+      font-family: $font-source-sans !important;
       border: none !important;
       background: #f3f3f3 !important;
       width: 100%;
@@ -174,7 +176,8 @@ $user-message-color: #5ac8bd !default;
     }
 
     .gwc-chat-message-form {
-      font-family: $font-roboto !important;
+      //font-family: $font-roboto !important;
+      font-family: $font-source-sans !important;
       position: absolute;
       margin: 0;
       left: 0;
@@ -185,7 +188,8 @@ $user-message-color: #5ac8bd !default;
         height: auto;
         border: 1px solid #bbb !important;
         border-bottom: 10px solid #bbb !important;
-        font-family: $font-roboto !important;
+        //font-family: $font-roboto !important;
+        font-family: $font-source-sans !important;
         line-height: 12px !important;
         padding: 5px 0 5px 35px;
         position: relative;

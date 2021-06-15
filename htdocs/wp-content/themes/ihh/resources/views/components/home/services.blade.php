@@ -11,7 +11,7 @@
       <div class="services-header">
         <img src="{{ the_sub_field('image') }}" alt="">
       </div>
-      <h2 style="margin-top: 80px; font-size: 55px;">{{the_sub_field('title')}}</h2>
+      <h2>{{the_sub_field('title')}}</h2>
     </div>
   </section>
   <section class="services" style="padding-top: 0;">

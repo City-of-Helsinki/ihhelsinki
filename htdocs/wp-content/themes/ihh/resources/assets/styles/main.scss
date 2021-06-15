@@ -20,6 +20,7 @@
 @import "components/wp-classes";
 @import "components/navigation";
 @import "components/services-list";
+@import "components/media-category-list";
 @import "components/service-status";
 @import "components/wave";
 @import "components/chat";
@@ -36,3 +37,6 @@
 @import "layouts/contact";
 @import "layouts/about";
 @import "layouts/faq";
+@import "layouts/event";
+@import "layouts/employers";
+@import "components/events";

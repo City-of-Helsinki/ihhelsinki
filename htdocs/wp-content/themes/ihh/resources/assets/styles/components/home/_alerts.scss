@@ -7,13 +7,17 @@
 
     .notification-icon {
       display: inline-block;
-      width: 7px;
-      height: 19px;
-      background: url("../images/icons/huutomerkki.png") center center no-repeat;
-      background-size: 100%;
+      width: 25px;
+      height: 100%;
+      background: url("../images/icons/notice.svg") center center no-repeat;
+      background-size: contain;
       margin: 0 10px -4px 0;
+      position: absolute;
+      left: 0;
+      top: 0;
     }
 
+    font-family: $font-roboto;
     background: $kuvittaja-yellow;
     border: none;
     border-radius: 0;
@@ -57,6 +61,7 @@
 
       align-items: center;
       padding-left: 40px;
+      position: relative;
 
       > .notification-body {
         font-size: 85%;

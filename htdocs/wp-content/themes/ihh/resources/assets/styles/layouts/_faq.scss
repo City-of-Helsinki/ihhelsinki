@@ -11,13 +11,15 @@
 #faqs {
   @include media-breakpoint-down("sm") {
     margin-bottom: 80px;
+    padding: 20px;
   }
 
-  margin-bottom: 160px;
+  margin-bottom: 60px;
   padding: 0;
 
   .question {
-    font-family: $font-open-sans;
+    //font-family: $font-open-sans;
+    font-family: $font-source-sans;
     border-bottom: 1px solid #d8d8d8;
 
     &:focus-within {
@@ -33,7 +35,9 @@
       margin: 0;
       color: #000;
       font-size: 16px;
-      font-family: $font-open-sans;
+      line-height: 1.25 !important;
+      //font-family: $font-open-sans;
+      font-family: $font-source-sans;
       font-weight: bold;
       width: 100%;
       text-align: left;
@@ -72,6 +76,7 @@
     .question-answer {
       padding: 20px 20px 20px;
       font-size: 14px;
+      line-height: 1.25 !important;
       //color: #6d6d6d;
       background: $kuvittaja-pink-light;
     }
@@ -110,4 +115,8 @@
       text-decoration: none;
     }
   }
+}
+
+.faq-margin-top {
+  margin-top: 40px;
 }

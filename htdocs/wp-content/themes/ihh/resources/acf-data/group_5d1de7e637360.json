@@ -34,9 +34,9 @@
             "layout": "block",
             "sub_fields": [
                 {
-                    "key": "field_5d1de8471e8bb",
-                    "label": "Body",
-                    "name": "body",
+                    "key": "field_60bde7ded24b2",
+                    "label": "Description",
+                    "name": "description",
                     "type": "textarea",
                     "instructions": "",
                     "required": 1,
@@ -51,9 +51,49 @@
                     "maxlength": "",
                     "rows": 4,
                     "new_lines": ""
+                }
+            ]
+        },
+        {
+            "key": "field_60bcfafb063bf",
+            "label": "Testimonial repeater",
+            "name": "testimonial_repeater",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 1,
+            "max": 2,
+            "layout": "row",
+            "button_label": "",
+            "sub_fields": [
+                {
+                    "key": "field_60bcfb48063c0",
+                    "label": "Body",
+                    "name": "body",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "rows": 4,
+                    "new_lines": ""
                 },
                 {
-                    "key": "field_5d2c43947e9ae",
+                    "key": "field_60bcfb6c063c1",
                     "label": "Image",
                     "name": "image",
                     "type": "image",
@@ -77,7 +117,7 @@
                     "mime_types": ""
                 },
                 {
-                    "key": "field_5d2c43a47e9af",
+                    "key": "field_60bcfba4063c2",
                     "label": "Video link",
                     "name": "video_link",
                     "type": "url",
@@ -587,5 +627,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1615977981
+    "modified": 1623763041
 }

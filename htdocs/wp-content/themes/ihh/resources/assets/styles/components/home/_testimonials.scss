@@ -5,28 +5,23 @@
     @include make-row();
 
     .content {
-      @include media-breakpoint-down("md") {
-        padding: 10px 60px;
-        background-position: 0 10px;
-      }
+      @include make-col(6);
 
       @include media-breakpoint-down("sm") {
         @include make-col(12);
 
-        order: 12;
         background-position: 15px 10px;
         padding: 10px 25px 10px 75px;
       }
 
-      @include make-col(8);
-
       position: relative;
-      padding: 40px 60px;
-      background: url("../images/icons/quote.svg") left 40px no-repeat;
+      padding: 20px 60px;
+      background: url("../images/icons/quote.svg") left 20px no-repeat;
       background-size: 40px 40px;
 
       p {
-        font-family: $font-open-sans;
+        // font-family: $font-open-sans;
+        font-family: $font-source-sans;
         font-size: 24px;
         font-weight: 400;
         line-height: 32px;
@@ -38,21 +33,25 @@
       }
     }
 
-    .image {
-      @include make-col(4);
+    .videos {
+      @include make-col(6);
 
       @include media-breakpoint-down("sm") {
         @include make-col(12);
-
-        img {
-          padding: 0 15px;
-          margin: 0 0 15px 0;
-        }
       }
 
-      img {
-        width: 100%;
-        height: auto;
+      display: flex;
+
+      .video {
+        flex-basis: 100%;
+        margin: 24px 1rem 1rem 1rem;
+
+        .image {
+          img {
+            width: 100%;
+            height: auto;
+          }
+        }
       }
     }
   }

@@ -9,7 +9,7 @@
     ]
   },
   "publicPath": "/wp-content/themes/ihh",
-  "devUrl": "http://ihh.lndo.site",
+  "devUrl": "http://ihhelsinkilocal.lndo.site/",
   "proxyUrl": "http://localhost:3000",
   "cacheBusting": "[name]_[hash:8]",
   "watch": [

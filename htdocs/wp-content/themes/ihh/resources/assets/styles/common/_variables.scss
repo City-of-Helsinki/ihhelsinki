@@ -18,6 +18,7 @@ $kuvittaja-yellow: rgb(240, 232, 86) !default;
 $kuvittaja-yellow-light: rgb(247, 237, 152) !default;
 
 $black: #231f20 !default;
+//$black: crimson;
 $gray-900: $black !default;
 $primary-dark: $kuvittaja-green !default;
 $secondary-dark: $kuvittaja-darker-green !default;
@@ -42,7 +43,8 @@ $warning: map_get($theme-colors, "warning");
 //$dark: $gray-800 !default;
 $yellow: map_get($theme-colors, "warning");
 
-$font-family-sans-serif: $font-roboto !default;
+//$font-family-sans-serif: $font-roboto !default;
+$font-family-sans-serif: $font-source-sans !default;
 
 /** Bootstrap navbar fix (https://git.io/fADqW) */
 $navbar-dark-toggler-icon-bg: none;

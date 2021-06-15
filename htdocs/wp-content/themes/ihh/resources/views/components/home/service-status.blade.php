@@ -92,11 +92,10 @@ $scheme = get_sub_field('color_scheme');
           <div class="text">
             {{ the_sub_field('text')}}
           </div>
-          <div class="button" @if(get_sub_field('button_backround_color')) style="background-color: {{the_sub_field('button_backround_color')}}" @endif>
-            <a href="{{ the_sub_field('button_link')}}" @if(get_sub_field('open_in_new_tab')) target="_blank" @endif  @if(get_sub_field('text_color')) style="color: {{the_sub_field('text_color')}} !important" @endif>
-              {{ the_sub_field('button_text')}}
-            </a>
-          </div>
+
+          <a class="button" href="{{ the_sub_field('button_link')}}" @if(get_sub_field('open_in_new_tab')) target="_blank" @endif  @if(get_sub_field('text_color')) style="color: {{the_sub_field('text_color')}} !important" @endif>
+            {{ the_sub_field('button_text')}}
+          </a>
         </div>
         @endwhile
       @endif

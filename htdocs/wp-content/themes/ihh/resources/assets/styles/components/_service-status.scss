@@ -36,8 +36,8 @@
 
       display: block;
       background-color: transparent;
-      padding: 20px 35px;
-      border: 2px solid black;
+      //padding: 20px 35px;
+      //border: 2px solid black;
       font-weight: 700;
       text-decoration: none;
       color: black !important;
@@ -48,6 +48,10 @@
     }
 
     .icon {
+      @include media-breakpoint-down("sm") {
+        display: none;
+      }
+
       &::before {
         font-family: FontAwesome, sans-serif;
         content: "\f06a";
@@ -83,6 +87,37 @@
     div:first-child {
       align-items: end;
       justify-content: left;
+    }
+
+    .button {
+      @include media-breakpoint-down("sm") {
+        margin-top: 25px;
+        font-size: 15px;
+      }
+
+      @extend .btn;
+
+      transition: box-shadow, 0.3s;
+      margin-top: 20px;
+      background: #fff;
+      color: #000;
+      //font-family: $font-source-sans;
+      font-family: $font-source-sans;
+      font-size: 16px;
+      font-weight: bold;
+      text-transform: uppercase;
+      padding: 15px 30px;
+      border-radius: 30px;
+      line-height: 1;
+      text-decoration: none;
+
+      &:hover {
+        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+      }
+
+      &:focus {
+        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+      }
     }
 
     div:last-child {

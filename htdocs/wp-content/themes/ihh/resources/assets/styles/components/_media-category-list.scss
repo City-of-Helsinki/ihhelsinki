@@ -1,0 +1,102 @@
+.media-posts-container {
+  display: block;
+
+  a {
+    background-color: transparent !important;
+  }
+
+  a[target="_blank"]::before {
+    content: " ";
+  }
+
+  .media-container {
+    height: 340px;
+
+    a[target="_blank"]::before {
+      content: " ";
+    }
+
+    a {
+      background-color: transparent !important;
+    }
+
+    .title {
+      height: 100px;
+      padding: 30px 40px;
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+
+    .title.background-keltainen {
+      background-color: #f0e856;
+    }
+
+    .title.background-oranssi {
+      background-color: #f7a091;
+    }
+
+    .title.background-vihrea {
+      background-color: #92c8c2;
+    }
+
+    .title p {
+      font-size: 16px;
+      font-weight: 700;
+      color: #300;
+      margin-bottom: 1px;
+    }
+
+    .image-wrap {
+      height: 240px;
+      object-fit: contain;
+      text-align: center;
+      background-color: #e9ebec;
+
+      img {
+        max-width: 100%;
+        max-height: 100%;
+      }
+    }
+  }
+
+  .icon-teksti {
+    display: inline-block;
+    width: 20px;
+    height: 100%;
+    background: url("../images/icons/textdocument.svg") center center no-repeat;
+    background-size: 100%;
+    margin: 0 10px -4px 0;
+    position: absolute;
+    left: 10px;
+    top: 0;
+  }
+
+  .icon-pdf {
+    display: inline-block;
+    width: 20px;
+    height: 100%;
+    background: url("../images/icons/pdfdocument.svg") center center no-repeat;
+    background-size: 100%;
+    margin: 0 10px -4px 0;
+    position: absolute;
+    left: 10px;
+    top: 0;
+  }
+
+  .icon-video {
+    display: inline-block;
+    width: 20px;
+    height: 100%;
+    background: url("../images/icons/video.svg") center center no-repeat;
+    background-size: 100%;
+    margin: 0 10px -4px 0;
+    position: absolute;
+    left: 10px;
+    top: 0;
+  }
+}
+
+.single-amb_media_catalogue .content-block a[target="_blank"]::before {
+  content: "";
+}

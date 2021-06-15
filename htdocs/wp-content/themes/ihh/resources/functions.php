@@ -69,6 +69,20 @@ array_map( function ( $file ) use ( $ihh_error ) {
     'customizer',
 ] );
 
+function amb_custom_post_type() {
+    register_post_type('amb_media_catalogue',
+        array(
+            'labels'      => array(
+                'name'          => __('Media Categories', 'textdomain'),
+                'singular_name' => __('Media category', 'textdomain'),
+            ),
+                'public'      => true,
+                'has_archive' => true,
+        )
+    );
+}
+add_action('init', 'amb_custom_post_type');
+
 /**
  * Here's what's happening with these hooks:
  * 1. WordPress initially detects theme in themes/ihh/resources

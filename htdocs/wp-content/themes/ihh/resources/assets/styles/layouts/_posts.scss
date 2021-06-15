@@ -10,6 +10,10 @@
   @include make-row(0);
 
   //justify-content: space-evenly;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: stretch;
   margin: 60px 0;
 
   .post-grid-item {
@@ -28,9 +32,11 @@
     transition: box-shadow, 0.3s;
     display: flex;
     flex-flow: column;
-    font-family: $font-open-sans;
-    margin-bottom: 20px;
-    margin-right: auto;
+    //font-family: $font-open-sans;
+    font-family: $font-source-sans;
+    //margin-bottom: 20px;
+    //margin-right: auto;
+    margin: 0 1% 20px 1%;
 
     header img {
       max-width: 100%;
@@ -54,6 +60,8 @@
       font-size: 16px;
       line-height: 19px;
       font-family: $font-open-sans;
+      //font-family: $font-source-sans;
+      //font-family: $font-roboto;
       font-weight: 600;
       color: #231f00;
       margin: 0 0 10px 0;
@@ -114,7 +122,8 @@
       @extend .btn;
 
       background: #fff;
-      font-family: $font-open-sans;
+      //font-family: $font-open-sans;
+      font-family: $font-source-sans;
       font-weight: 500;
       color: black;
       text-align: center;
