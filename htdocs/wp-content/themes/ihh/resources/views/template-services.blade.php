@@ -10,6 +10,7 @@
     @include('partials.content.header')
     @include('partials.content.page')
     @include('components.services-accordion')
+    @include('components.home.media-category')
   </article>
   @endwhile
 @endsection
