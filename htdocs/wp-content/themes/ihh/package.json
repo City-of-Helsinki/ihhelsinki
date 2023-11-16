@@ -76,7 +76,7 @@
     "yargs": "~11.0.0"
   },
   "dependencies": {
-    "bootstrap": "v4.3.1",
+    "bootstrap": "4.6.2",
     "jquery": "^3.3.1",
     "popper.js": "^1.14.7",
     "venobox": "^1.8.6"
