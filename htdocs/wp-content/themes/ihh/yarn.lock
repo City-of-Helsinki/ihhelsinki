@@ -9953,10 +9953,10 @@ vendors@^1.0.0:
   resolved "https://registry.yarnpkg.com/vendors/-/vendors-1.0.3.tgz#a6467781abd366217c050f8202e7e50cc9eef8c0"
   integrity sha512-fOi47nsJP5Wqefa43kyWSg80qF+Q3XA6MUkgi7Hp1HQaKDQW4cQrK2D0P7mmbFtsV1N89am55Yru/nyEwRubcw==
 
-venobox@^1.8.6:
-  version "1.8.6"
-  resolved "https://registry.yarnpkg.com/venobox/-/venobox-1.8.6.tgz#1d72860b9534f80d31cee924215d8cdf454bd784"
-  integrity sha512-D5GFMNxoCmEglV2E2YgKK3XZhfaX1KW6YqEZL7BsdTTsvYBEiAXsWKs3OvufnoGp/G6sCTB52jPD9jnN7o8C4A==
+venobox@^1.9.4:
+  version "1.9.4"
+  resolved "https://registry.yarnpkg.com/venobox/-/venobox-1.9.4.tgz#0394210a90830f4cb7479331158e3bc91e3832de"
+  integrity sha512-OZmdBUxztT9b8e8qNhM1BWcw7wKHaSxL3mMeAG443H8Qr1ng2sG01mOWqSNE9wdqXUwTzUKXWjuDUcszOraPwA==
   dependencies:
     jquery ">=1.7.0"
 
